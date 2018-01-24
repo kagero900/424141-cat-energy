@@ -12,33 +12,39 @@
             <img class="header-logo__image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип Cat Energy">
             <img class="header-logo__brand brand-name brand-name--header" src="http://placehold.it/100x18" width="100" height="18" alt="Cat Energy">
           </a>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle main-nav__toggle--active" type="button">Открыть/закрыть меню</button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a>Подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </header>
       <main class="page-main">
         <section class="program">
-          <h1 class="program__title">Подбор программы</h1>
+          <h1 class="program__title title-common">Подбор программы</h1>
           <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
           <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset>
               <legend class="visually-hidden">Данные кота </legend>
-              <label class="program__name" for="name">Имя:<sup>*</sup></label>
-              <input class="program__field" type="text" id="name" name="name" placeholder="Барсик" required>
-              <label class="program__name" for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="program__field" type="text" id="weight" name="weight" value="7" required>
-              <label class="program__name" for="age">Возраст (лет):</label>
-              <input class="program__field" type="text" id="age" name="age" value="7">
+              <div class="program__field-wrapper">
+                <label class="program__name" for="name">Имя:<sup>*</sup></label>
+                <input class="program__field" type="text" id="name" name="name" placeholder="Барсик" required>
+              </div>
+              <div class="program__field-wrapper">
+                <label class="program__name" for="weight">Вес (кг):<sup>*</sup></label>
+                <input class="program__field" type="text" id="weight" name="weight" value="7" required>
+              </div>
+              <div class="program__field-wrapper">
+                <label class="program__name" for="age">Возраст (лет):</label>
+                <input class="program__field" type="text" id="age" name="age" value="7">
+              </div>
               <ul class="program__type-list">
                 <li class="program__list-item">
                   <input class="visually-hidden program__radio-input" type="radio" id="losing-weight" name="program-type" value="losing-weight" checked>
@@ -56,10 +62,14 @@
             </fieldset>
             <fieldset>
               <legend class="program__subtitle">Контактные данные (владельца кота)</legend>
-              <label class="program__name" for="email">E-mail:<sup>*</sup></label>
-              <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-              <label class="program__name" for="phone">Телефон:<sup>*</sup></label>
-              <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              <div class="program__field-wrapper">
+                <label class="program__name" for="email">E-mail:<sup>*</sup></label>
+                <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="program__field-wrapper">
+                <label class="program__name" for="phone">Телефон:<sup>*</sup></label>
+                <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              </div>
             </fieldset>
             <fieldset>
               <legend class="program__subtitle">Комментарий</legend>
