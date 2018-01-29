@@ -2,18 +2,23 @@
   padding: 20px;
   border: 1px solid red;/*for me*/
 }
+
 .catalog-main__more {
   border: 1px solid blue;/*for me*/
 }
+
 .catalog-main__more-title {
   @include font();
   color: $darkgrey-color;
   text-transform: uppercase;
   border: 1px solid green;/*for me*/
 }
+
 .catalog-main__more-text {
   font-family: $ffas;
+
   @include font(12px, 16px);
   color: $grey-color;
   border: 1px solid violet;/*for me*/
 }
+

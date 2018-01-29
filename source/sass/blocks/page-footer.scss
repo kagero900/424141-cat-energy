@@ -4,20 +4,25 @@
   border: 1px solid red;/*for me*/
   background-color: $lightgrey-color;
 }
+
 .page-footer__contacts {
   &--index {
     background-color: #ffffff;
   }
 }
+
 .page-footer__invite {
   margin: 0;
+
   @include font();
   text-transform: uppercase;
   border: 1px solid green;/*for me*/
 }
+
 .page-footer__address {
   margin: 0;
   font-family: $ffas;
+
   @include font(14px, 20px);
   color: $grey-color;
   border: 1px solid violet;/*for me*/

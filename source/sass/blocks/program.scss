@@ -2,84 +2,100 @@
   padding: 20px;
   border: 1px solid red;/*for me*/
 }
+
 .program__title {
   border: 1px solid green;/*for me*/
 }
+
 .program__text {
   @include font(14px, 18px);
   text-transform: uppercase;
   color: $darkgrey-color;
   border: 1px solid violet;/*for me*/
 }
+
 .program__fieldset {
   margin: 0;
   padding: 0;
   border: none;
   border: 1px solid blue;/*for me*/
 }
+
 .program__subtitle {
   padding: 20px;
   padding-left: 0;
+
   @include font(24px, 24px);
   color: $darkgrey-color;
   border: 1px solid violet;/*for me*/
 }
+
 .program__field-wrapper {
   display: flex;
   border: 1px solid cyan;/*for me*/
 }
+
 .program__name {
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222;
 }
+
 .program__field {
   padding: 15px;
   font-family: inherit;
+
   @include font(16px, 18px);
   text-transform: uppercase;
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: $grey-color;
   &::placeholder {
     opacity: 1;
-  };
+  }
   &:hover {
     border-color: #cdcdcd;
-  };
+  }
   &:focus,
   &:active{
     border: 2px solid $grey-color;
-  };
+  }
   &:invalid {
     border: 2px solid #ff8282;
-  };
+  }
 }
+
 .program__type-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .program__list-item {
   padding: 15px;
   padding-left: 47px;
+
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222;
 }
+
 .program__comment {
   padding: 15px;
   font-family: inherit;
+
   @include font(16px, 18px);
   text-transform: uppercase;
   resize: none;
   color: inherit;
   border: none;
 }
+
 .program__extra-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .program__button {
   font-family: inherit;
   width: 100%;
@@ -87,8 +103,10 @@
   cursor: pointer;
   border: none;
 }
+
 .program__requirements {
   font-family: $ffas;
+
   @include font(14px, 16px);
   border: 1px solid violet;/*for me*/
 }

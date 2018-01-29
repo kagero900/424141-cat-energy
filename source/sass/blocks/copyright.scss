@@ -1,8 +1,10 @@
 .copyright {
   border: 1px solid blue;/*for me*/
 }
+
 .copyright__text {
   font-family: $ffas;
+
   @include font(16px, 16px);
   color: $grey-color;
 }
