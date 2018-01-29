@@ -17,7 +17,6 @@
 .program__fieldset {
   margin: 0;
   padding: 0;
-  border: none;
   border: 1px solid blue;/*for me*/
 }
 
@@ -38,7 +37,7 @@
 .program__name {
   @include font(16px, 18px);
   text-transform: uppercase;
-  color: #222;
+  color: #222222;
 }
 
 .program__field {
@@ -49,16 +48,20 @@
   text-transform: uppercase;
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: $grey-color;
+
   &::placeholder {
     opacity: 1;
   }
+
   &:hover {
     border-color: #cdcdcd;
   }
+
   &:focus,
-  &:active{
+  &:active {
     border: 2px solid $grey-color;
   }
+
   &:invalid {
     border: 2px solid #ff8282;
   }
@@ -76,7 +79,7 @@
 
   @include font(16px, 18px);
   text-transform: uppercase;
-  color: #222;
+  color: #222222;
 }
 
 .program__comment {

@@ -22,10 +22,12 @@
   font-weight: 500;
   text-transform: uppercase;
   color: $darkgrey-color;
+
   &:focus,
   &:hover {
     color: rgba(17, 17, 17, 0.6);
   }
+
   &:active {
     color: rgba(17, 17, 17, 0.3);
   }
