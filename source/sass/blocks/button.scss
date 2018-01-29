@@ -11,19 +11,23 @@
   &:focus,
   &:hover {
     background-color: $darkgreen-color;
-  };
+  }
+
   &:active {
     color: $transwhite-color;
-  };
+  }
+
   &--to-all {
     color: $grey-color;
     background-color: #f2f2f2;
+
     &:focus,
     &:hover {
       background-color: #ebebeb;
-    };
+    }
+
     &:active {
       color: $transgrey-color;
-    };
+    }
   }
 }
