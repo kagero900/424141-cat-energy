@@ -1,0 +1,19 @@
+.catalog-card {
+  padding: 24px 0;
+  border: 1px solid red;/*for me*/
+}
+.catalog-card__title {
+  margin: 0;
+  @include font();
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid green;/*for me*/
+}
+.catalog-card__link {
+  color: $darkgrey-color;
+}
+.catalog-card__info {
+  font-family: $ffas;
+  @include font(12px, 16px);
+  border: 1px solid cyan;/*for me*/
+}

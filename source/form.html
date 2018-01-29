@@ -32,7 +32,7 @@
           <h1 class="program__title page-title">Подбор программы</h1>
           <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
           <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset>
+            <fieldset class="program__fieldset">
               <legend class="visually-hidden">Данные кота</legend>
               <div class="program__field-wrapper">
                 <label class="program__name" for="name">Имя:<sup>*</sup></label>
@@ -61,8 +61,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend class="program__subtitle">Контактные данные (владельца кота)</legend>
+            <fieldset class="program__fieldset">
+              <legend class="program__subtitle">Контактные данные<br>(владельца кота)</legend>
               <div class="program__field-wrapper">
                 <label class="program__name" for="email">E-mail:<sup>*</sup></label>
                 <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -72,13 +72,13 @@
                 <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="program__fieldset">
               <legend class="program__subtitle">Комментарий</legend>
               <textarea class="program__comment" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset>
+            <fieldset class="program__fieldset">
               <legend class="program__subtitle">Дополнительно</legend>
-              <ul>
+              <ul class="program__extra-list">
                 <li class="program__list-item">
                   <input class="visually-hidden program__checkbox-input" type="checkbox" id="sweetener" name="sweetener" checked>
                   <label class="program__checkbox-name" for="sweetener" name="sweetener">Сахарозаменитель</label>
