@@ -1,19 +1,15 @@
 body {
-  font-family: Oswald, Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   background-color: #ffffff;
-  color: $grey-color;
-}
+  color: $grey-color; }
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+*::before,
+*::after {
+  box-sizing: inherit; }
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -22,5 +18,4 @@ html {
   height: 1px;
   margin: -1px;
   padding: 0;
-  border: 0;
-}
+  border: 0; }

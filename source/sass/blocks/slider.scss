@@ -1,11 +1,8 @@
 .slider {
-
-
-}
+  border: 1px solid red;/*for me*/ }
 .slider__control {
   @include font();
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 .slider__scale {
   width: 85px;
   height: 14px;
@@ -15,5 +12,4 @@
     width: 35px;
     height: 6px;
     background-color: $green-color;
-  }
-}
+  }; }
