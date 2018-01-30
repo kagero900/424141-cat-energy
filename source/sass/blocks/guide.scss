@@ -1,0 +1,27 @@
+.guide {
+  padding: 20px;
+  border: 1px solid red;/*for me*/
+}
+
+.guide__title {
+  border: 1px solid green;/*for me*/
+}
+
+.guide__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid blue;/*for me*/
+}
+
+.guide__item {
+  margin-bottom: 20px;
+  padding-left: 80px;
+  font-family: $ffas;
+
+  @include font(14px, 18px);
+  border: 1px solid orange;/*for me*/
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

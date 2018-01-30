@@ -1,0 +1,38 @@
+.main-nav {
+  border: 1px solid blue;/*for me*/
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid green;/*for me*/
+}
+
+.main-nav__item {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid cyan;/*for me*/
+}
+
+.main-nav__link {
+  padding-bottom: 2px;
+
+  @include font(20px, 20px);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $darkgrey-color;
+
+  &:focus,
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &--active {
+    border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
+  }
+}

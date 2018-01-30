@@ -1,0 +1,46 @@
+.example {
+  background-color: $lightgrey-color;
+  border: 1px solid red;/*for me*/
+}
+
+.example__wrapper {
+  margin: 0;
+  padding: 20px;
+}
+
+.example__title {
+  border: 1px solid green;/*for me*/
+}
+
+.example__description {
+  font-family: $ffas;
+
+  @include font(14px, 18px);
+  border: 1px solid violet;/*for me*/
+}
+
+.example__list {
+  list-style: none;
+  border: 1px solid cyan;/*for me*/
+}
+
+.example__value {
+  @include font(24px, 24px);
+  text-transform: uppercase;
+}
+
+.example__made {
+  font-family: $ffas;
+
+  @include font(12px, 12px);
+  text-transform: lowercase;
+}
+
+.example__costs {
+  @include font(14px, 20px);
+  text-transform: uppercase;
+}
+
+.example__slider {
+  border: 1px solid yellow;/*for me*/
+}

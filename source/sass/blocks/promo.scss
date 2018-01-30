@@ -1,0 +1,25 @@
+.promo {
+  padding: 20px;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat 0 0;
+  border: 1px solid red;/*for me*/
+}
+
+.promo__title {
+  margin: 0;
+
+  @include font(36px, 36px);
+  font-weight: 400;
+  color: #ffffff;
+  border: 1px solid green;/*for me*/
+}
+
+.promo__text {
+  @include font(14px, 14px);
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid violet;/*for me*/
+}
+
+.promo__button {
+  @include font(14px, 18px);
+}
