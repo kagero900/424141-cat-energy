@@ -1,4 +1,6 @@
 .example {
+  display: flex;
+  flex-direction: column;
   background-color: $lightgrey-color;
   border: 1px solid red;/*for me*/
 }
@@ -20,27 +22,130 @@
 }
 
 .example__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  border: 1px solid cyan;/*for me*/
+  /*border: 1px solid cyan;/*for me*/
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 124px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .example__value {
   @include font(24px, 24px);
   text-transform: uppercase;
+  display: block;
+  padding: 15px;
 }
 
 .example__made {
+  position: relative;
+  bottom: -15px;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
   font-family: $ffas;
 
   @include font(12px, 12px);
   text-transform: lowercase;
+  background-color: $lightgrey-color;
 }
 
 .example__costs {
   @include font(14px, 20px);
   text-transform: uppercase;
+  display: block;
+  text-align: center;
+
 }
 
 .example__slider {
   border: 1px solid yellow;/*for me*/
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__wrapper {
+    padding: 30px;
+  }
+
+  .example__description {
+    @include font(16px, 24px);
+  }
+
+  .example__stats {
+    display: flex;
+  }
+
+  .example__list {
+    width: 368px;
+  }
+
+  .example__item {
+    width: 162px;
+  }
+  .example__value {
+    @include font(30px, 37px);
+  }
+  .example__made {
+    @include font(14px, 14px);
+    width: 127px;
+    bottom: -8px;
+    padding: 0;
+  }
+  .example__costs {
+    margin-top: 20px;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: right;
+    width: 175px;
+  }
+  .example__costs-name {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 7px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    flex-direction: row;
+
+  }
+
+  .example__wrapper {
+    width: 50%;
+    padding-left: 110px;
+    background-image: linear-gradient(#ffffff 190px, $lightgrey-color 190px);
+  }
+  .example__title {
+    padding: 40px 0;
+    margin-bottom: 75px;
+  }
+  .example__stats {
+    flex-direction: column;
+  }
+
+  .example__costs {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0;
+    width: 325px;
+  }
+  .example__slider {
+    width: 50%;
+  }
 }

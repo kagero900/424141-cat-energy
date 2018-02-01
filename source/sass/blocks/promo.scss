@@ -1,6 +1,13 @@
 .promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat 0 0;
+  background-image:
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(#63a73a 66%, #ffffff 66%);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
   border: 1px solid red;/*for me*/
 }
 
@@ -9,6 +16,7 @@
 
   @include font(36px, 36px);
   font-weight: 400;
+  text-align: center;
   color: #ffffff;
   border: 1px solid green;/*for me*/
 }
@@ -22,4 +30,57 @@
 
 .promo__button {
   @include font(14px, 18px);
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    align-items: flex-start;
+    background: none;
+  }
+
+  .promo__title {
+    @include font(60px, 60px);
+    margin-left: 95px;
+    text-align: left;
+    color: $darkgrey-color;
+  }
+
+  .promo__text {
+    @include font(20px, 20px);
+    margin-left: 95px;
+    color: $darkgrey-color;
+  }
+
+  .promo__button {
+    @include font(20px, 20px);
+    width: 241px;
+    margin-left: 95px;
+    z-index: 1;
+  }
+
+  .promo__image {
+    align-self: center;
+    order: 1;
+    margin-top: -40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    min-height: 605px;/*for me*/
+    background-image:
+    url("../img/index-background-desktop@1x.jpg"),
+    linear-gradient(to left, #65a93c 40%, #ffffff 40%);
+    background-repeat: no-repeat;
+    background-position: 100% -50px;
+  }
+
+  .promo__title {
+    margin-top: 100px;
+  }
+
+  .promo__image {
+    margin-top: -270px;
+    margin-left: 80px;
+  }
 }
