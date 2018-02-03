@@ -1,11 +1,18 @@
 body {
   font-family: "Oswald", "Arial", sans-serif;
-  background-color: #ffffff;
+
+  @include font();/*как доделаю - посчитаю, каких размеров больше*/
   color: $grey-color;
+  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 html {

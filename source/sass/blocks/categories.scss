@@ -1,9 +1,8 @@
 .categories__list {
   display: flex;
   flex-direction: column;
-
   margin: 0;
-  padding: 20px;
+  padding: 0;
   list-style: none;
   border: 1px solid red;/*for me*/
 }
@@ -84,15 +83,12 @@
   text-transform: uppercase;
   color: $darkgrey-color;
   /*background-color: transparent;*/
-
 }
 
 @media (min-width: $tablet-width) {
-  .categories__list {
-    padding: 30px;
-  }
   .categories__item {
     min-height: 370px;
+
     &::before {
       left: auto;
       top: 92px;
@@ -124,6 +120,7 @@
 
   .categories__title {
     padding-left: 0;
+
     @include font(36px, 37px);
   }
 
@@ -142,12 +139,11 @@
 @media (min-width: $desktop-width) {
   .categories__list {
     flex-direction: row;
-    padding: 0 60px;
   }
 
   .categories__item {
     padding-top: 70px;
-    margin: 26px 40px;
+
     &::before {
       top: 47px;
       left: 52px;

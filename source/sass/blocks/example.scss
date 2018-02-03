@@ -1,13 +1,11 @@
 .example {
-  display: flex;
-  flex-direction: column;
   background-color: $lightgrey-color;
   border: 1px solid red;/*for me*/
 }
 
 .example__wrapper {
-  margin: 0;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .example__title {
@@ -65,7 +63,6 @@
   text-transform: uppercase;
   display: block;
   text-align: center;
-
 }
 
 .example__slider {
@@ -75,10 +72,6 @@
 @media (min-width: $tablet-width) {
   .example {
     background-color: #ffffff;
-  }
-
-  .example__wrapper {
-    padding: 30px;
   }
 
   .example__description {
@@ -96,15 +89,18 @@
   .example__item {
     width: 162px;
   }
+
   .example__value {
     @include font(30px, 37px);
   }
+
   .example__made {
     @include font(14px, 14px);
     width: 127px;
     bottom: -8px;
     padding: 0;
   }
+
   .example__costs {
     margin-top: 20px;
     margin-left: auto;
@@ -112,6 +108,7 @@
     text-align: right;
     width: 175px;
   }
+
   .example__costs-name {
     display: inline-block;
     vertical-align: top;
@@ -121,19 +118,24 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    flex-direction: row;
-
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, $lightgrey-color 50%, #eaeaea 50%);
+    background-position: 0 190px;
+    background-repeat: no-repeat;
   }
 
   .example__wrapper {
+    flex-direction: row;
+  }
+
+  .example__cover {
     width: 50%;
-    padding-left: 110px;
-    background-image: linear-gradient(#ffffff 190px, $lightgrey-color 190px);
   }
   .example__title {
     padding: 40px 0;
     margin-bottom: 75px;
   }
+
   .example__stats {
     flex-direction: column;
   }
@@ -145,6 +147,7 @@
     margin: 0;
     width: 325px;
   }
+
   .example__slider {
     width: 50%;
   }
