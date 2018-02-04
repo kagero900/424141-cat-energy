@@ -1,10 +1,10 @@
 .catalog-extra {
-  padding: 20px;
   border: 1px solid red; /*for me*/
 }
 
 .catalog-extra__title {
   margin: 0;
+  padding: 30px 0;
 
   @include font(24px, 24px);
   font-weight: 400;
@@ -20,9 +20,21 @@
 }
 
 .catalog-extra__promo {
+  position: relative;
   padding-top: 175px;
-  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 0 0;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 50% 0;
   border: 1px solid blue;/*for me*/
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat;
+  }
 }
 
 .catalog-extra__gift {
@@ -33,4 +45,61 @@
   text-align: center;
   color: #ffffff;
   border: 1px solid cyan;/*for me*/
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-extra__title {
+    padding: 55px 0;
+
+    @include font(36px, 36px);
+  }
+
+  .catalog-extra__promo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-left: 423px;
+    height: 200px;
+    background-color: $green-color;
+
+    &::after {
+      top: 65px;
+      left: 90px;
+    }
+  }
+
+  .catalog-extra__gift {
+    padding: 0 55px;
+    text-align: left;
+    border: 1px solid cyan;/*for me*/
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-extra {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog-extra__title {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .catalog-extra__list {
+    flex-shrink: 0;
+    margin-right: 40px;
+  }
+
+  .catalog-extra__promo {
+    width: 245px;
+    height: 287px;
+    flex-direction: column;
+    padding: 190px 42px 0 42px;
+  }
+
+  .catalog-extra__gift {
+    padding: 0;
+    text-align: center;
+  }
 }
