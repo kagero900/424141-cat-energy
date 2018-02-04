@@ -1,53 +1,82 @@
 .program {
-  padding: 20px;
-  border: 1px solid red;/*for me*/
+  /*border: 1px solid red;/*for me*/
 }
 
 .program__title {
-  border: 1px solid green;/*for me*/
+  padding: 20px 0;
+  margin-bottom: 5px;
+  /*border: 1px solid green;/*for me*/
 }
 
+/*.main-nav {
+  display: none;
+}*/
+
 .program__text {
+  margin: 0;
+  margin-bottom: 39px;
+  padding-right: 50px;
+
   @include font(14px, 18px);
   text-transform: uppercase;
   color: $darkgrey-color;
-  border: 1px solid violet;/*for me*/
+  /*border: 1px solid violet;/*for me*/
 }
 
 .program__fieldset {
   margin: 0;
   padding: 0;
-  border: 1px solid blue;/*for me*/
+  border: none;
+
+  &--cat {
+    margin-bottom: 7px;
+  }
+
 }
 
 .program__subtitle {
-  padding: 20px;
+  padding: 30px 20px 30px 0;
   padding-left: 0;
 
   @include font(24px, 24px);
   color: $darkgrey-color;
-  border: 1px solid violet;/*for me*/
+  /*border: 1px solid violet;/*for me*/
+
+  &--comment {
+    padding: 16px 20px 34px 0;
+  }
+
+  &--extra {
+    padding-bottom: 25px;
+  }
 }
 
 .program__field-wrapper {
   display: flex;
-  border: 1px solid cyan;/*for me*/
+  margin-bottom: 14px;
 }
 
 .program__name {
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222222;
+  flex-shrink: 0;
+  display: flex;
+  align-self: center;
 }
 
 .program__field {
-  padding: 15px;
+  min-width: 172px;
+  margin-left: 15px;
+  flex-grow: 1;
+  padding: 13px;
   font-family: inherit;
 
   @include font(16px, 18px);
   text-transform: uppercase;
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: $grey-color;
+  border-radius: 0;
 
   &::placeholder {
     opacity: 1;
@@ -62,19 +91,29 @@
     border: 2px solid $grey-color;
   }
 
-  &:invalid {
+  &:focus:invalid { /*херня какая-то с ним*/
     border: 2px solid #ff8282;
   }
 }
 
-.program__type-list {
+.program__type-list,
+.program__extra-list {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
   margin: 0;
   padding: 0;
+  padding: 15px 0;
   list-style: none;
 }
 
+.program__type-list {
+  border-top: 1px solid $lightgrey-color;
+  border-bottom: 1px solid $lightgrey-color;
+}
+
 .program__list-item {
-  padding: 15px;
+  padding: 12px;/*ideal!!*/
   padding-left: 47px;
 
   @include font(16px, 18px);
@@ -83,33 +122,43 @@
 }
 
 .program__comment {
-  padding: 15px;
+  display: block;
+  width:100%;
+  padding: 14px 0 15px 15px;
+  min-height: 150px;
   font-family: inherit;
 
   @include font(16px, 18px);
   text-transform: uppercase;
   resize: none;
   color: inherit;
-  border: none;
+  border: 1px solid $lightgrey-color;
 }
 
 .program__extra-list {
-  margin: 0;
   padding: 0;
-  list-style: none;
+  margin-bottom: 25px;
 }
 
 .program__button {
   font-family: inherit;
-  width: 100%;
+  margin-top: 8px;
+  padding: 10px 75px 10px 80px;
   display: block;
   cursor: pointer;
   border: none;
 }
 
 .program__requirements {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px 60px;
   font-family: $ffas;
 
   @include font(14px, 16px);
-  border: 1px solid violet;/*for me*/
+}
+
+@media (min-width: $tablet-width) {
+
 }

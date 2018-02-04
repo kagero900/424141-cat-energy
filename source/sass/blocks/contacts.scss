@@ -30,16 +30,18 @@
   border: 1px solid violet;/*for me*/
 
   span {
-      display: table;
-    }
+    display: table;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
     padding: 65px 40px;
   }
+
   .contacts__invite {
     width: 160px;
+
     @include font(20px, 25px);
   }
 

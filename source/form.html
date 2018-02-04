@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header container">
         <a class="main-nav__logo header-logo" href="index.html">
           <img class="header-logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
           <img class="header-logo__brand brand-name brand-name--header" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
@@ -28,25 +28,27 @@
           </ul>
         </nav>
       </header>
-      <main class="page-main">
+      <main class="page-main container">
         <section class="program">
           <h1 class="program__title page-title">Подбор программы</h1>
           <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
           <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="program__fieldset">
+            <fieldset class="program__fieldset program__fieldset--cat">
               <legend class="visually-hidden">Данные кота</legend>
               <div class="program__field-wrapper">
-                <label class="program__name" for="name">Имя:<sup>*</sup></label>
+                <label class="program__name" for="name">Имя:*</label>
                 <input class="program__field" type="text" id="name" name="name" placeholder="Барсик" required>
               </div>
               <div class="program__field-wrapper">
-                <label class="program__name" for="weight">Вес (кг):<sup>*</sup></label>
+                <label class="program__name" for="weight">Вес (кг):*</label>
                 <input class="program__field" type="text" id="weight" name="weight" value="7" required>
               </div>
               <div class="program__field-wrapper">
                 <label class="program__name" for="age">Возраст (лет):</label>
                 <input class="program__field" type="text" id="age" name="age" value="7">
               </div>
+            </fieldset>
+            <fieldset class="program__fieldset">
               <ul class="program__type-list">
                 <li class="program__list-item">
                   <input class="visually-hidden program__radio-input" type="radio" id="losing-weight" name="program-type" value="losing-weight" checked>
@@ -65,20 +67,20 @@
             <fieldset class="program__fieldset">
               <legend class="program__subtitle">Контактные данные<br>(владельца кота)</legend>
               <div class="program__field-wrapper">
-                <label class="program__name" for="email">E-mail:<sup>*</sup></label>
+                <label class="program__name" for="email">E-mail:*</label>
                 <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
               </div>
               <div class="program__field-wrapper">
-                <label class="program__name" for="phone">Телефон:<sup>*</sup></label>
+                <label class="program__name" for="phone">Телефон:*</label>
                 <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
               </div>
             </fieldset>
             <fieldset class="program__fieldset">
-              <legend class="program__subtitle">Комментарий</legend>
-              <textarea class="program__comment" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+              <legend class="program__subtitle program__subtitle--comment">Комментарий</legend>
+              <textarea class="program__comment" name="comment" id="comment" cols="30">Расскажите обо всех повадках кота</textarea>
             </fieldset>
             <fieldset class="program__fieldset">
-              <legend class="program__subtitle">Дополнительно</legend>
+              <legend class="program__subtitle program__subtitle--extra">Дополнительно</legend>
               <ul class="program__extra-list">
                 <li class="program__list-item">
                   <input class="visually-hidden program__checkbox-input" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -100,7 +102,7 @@
             </fieldset>
             <button class="program__button button" type="submit">Отправить заявку</button>
           </form>
-          <span class="program__requirements"><sup>*</sup> &mdash; Обязательные поля</span>
+          <span class="program__requirements">*&nbsp;&mdash;&nbsp;Обязательные поля</span>
         </section>
       </main>
       <footer class="page-footer">
