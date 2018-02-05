@@ -1,6 +1,6 @@
 .example {
   background-color: $lightgrey-color;
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .example__wrapper {
@@ -9,14 +9,14 @@
 }
 
 .example__title {
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .example__description {
   font-family: $ffas;
 
   @include font(14px, 18px);
-  border: 1px solid violet;/*for me*/
+  outline: 1px solid violet;/*for me*/
 }
 
 .example__list {
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-  /*border: 1px solid cyan;/*for me*/
+  /*outline: 1px solid cyan;/*for me*/
 }
 
 .example__item {
@@ -66,7 +66,7 @@
 }
 
 .example__slider {
-  border: 1px solid yellow;/*for me*/
+  outline: 1px solid yellow;/*for me*/
 }
 
 @media (min-width: $tablet-width) {

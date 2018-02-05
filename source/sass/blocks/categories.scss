@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .categories__item {
@@ -13,7 +13,7 @@
   flex-direction: column;
   padding: 20px;
   background-color: $lightgrey-color;
-  border: 1px solid blue;/*for me*/
+  outline: 1px solid blue;/*for me*/
 
   &:first-child {
     margin-bottom: 20px;
@@ -63,14 +63,14 @@
   font-weight: normal;
   text-transform: uppercase;
   color: $darkgrey-color;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .categories__text {
   font-family: $ffas;
 
   @include font(14px, 18px);
-  border: 1px solid violet;/*for me*/
+  outline: 1px solid violet;/*for me*/
 }
 
 .categories__button {

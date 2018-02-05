@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="page-header container">
-      <a class="main-nav__logo header-logo" href="index.html">
-        <img class="header-logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
-        <img class="header-logo__brand brand-name brand-name--header" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
+      <a class="main-nav__logo logo" href="index.html">
+        <img class="logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+        <img class="logo__brand brand-name brand-name--header" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть/закрыть меню</button>
@@ -270,33 +270,50 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts page-footer__contacts--inner">
-        <p class="page-footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </div>
+      <section class="page-footer__contacts contacts container">
+        <div class="contacts__wrapper">
+          <p class="contacts__invite">Приглашаем<br>к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
+            <span>Санкт-Петербург</span>
+          </p>
+        </div>
+      </section>
       <div class="page-footer__map">
         <iframe src="https://yandex.ru/map-widget/v1/-/CBeUnXFHWC" width="320" height="400" frameborder="0"></iframe>
       </div>
-      <a class="page-footer__logo">
-        <img class="brand-name brand-name--footer" src="http://placehold.it/130x24" width="130" height="24" alt="Cat Energy">
-      </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
-          </li>
-        </ul>
-      </div>
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">HTML Academy</span>
-        <img src="http://placehold.it/27x34" width="27" height="34" alt="Academy Logo">
-      </a>
+      <section class="page-footer__block-group">
+        <div class="page-footer__wrapper container">
+          <a class="page-footer__logo logo logo--footer">
+            <img class="logo__brand" src="img/logo-footer.svg" width="130" height="24" alt="Cat Energy">
+          </a>
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Вконтакте</span>
+                  <img src="img/icon-vk-mobile.svg" width="22" height="12" alt="vk">
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                  <span class="visually-hidden">Инстаграм</span>
+                  <img src="img/icon-insta-mobile.svg" width="16" height="16" alt="insta">
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Фейсбук</span>
+                  <img src="img/icon-fb-mobile.svg" width="10" height="19" alt="fb">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__text">HTML Academy</span>
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Academy Logo">
+          </a>
+        </div>
+      </section>
     </footer>
   </body>
 </html>

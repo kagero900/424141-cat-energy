@@ -4,7 +4,7 @@
     linear-gradient(#63a73a 66%, #ffffff 66%);
   background-repeat: no-repeat;
   background-position: 50% 0;
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .promo__wrapper {
@@ -20,14 +20,14 @@
   font-weight: 400;
   text-align: center;
   color: #ffffff;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .promo__text {
   @include font(14px, 14px);
   text-transform: uppercase;
   color: #ffffff;
-  border: 1px solid violet;/*for me*/
+  outline: 1px solid violet;/*for me*/
 }
 
 .promo__button {
@@ -77,6 +77,10 @@
       linear-gradient(to left, #65a93c 40%, #ffffff 40%);
     background-repeat: no-repeat;
     background-position: 100% -50px;
+  }
+
+  .promo__wrapper {
+    padding: 0;
   }
 
   .promo__title {

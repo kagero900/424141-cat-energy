@@ -4,7 +4,7 @@
   padding-bottom: 25px;
   width: 280px;
   min-height: 210px;
-  /*border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .catalog-card__image {
@@ -25,7 +25,7 @@
   @include font();
   font-weight: 400;
   text-transform: uppercase;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .catalog-card__link {
@@ -38,7 +38,7 @@
   border-collapse: collapse;
 
   @include font(12px, 16px);
-  border: 1px solid cyan;/*for me*/
+  outline: 1px solid cyan;/*for me*/
 
   & tr {
     width: 100%;
@@ -65,7 +65,6 @@
     min-height: 593px;
     padding: 40px;
     align-items: center;
-    border: 1px solid red;/*for me*/
   }
 
   .catalog-card__title {

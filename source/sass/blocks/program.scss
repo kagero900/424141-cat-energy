@@ -1,11 +1,11 @@
 .program {
-  /*border: 1px solid red;/*for me*/
+  /*outline: 1px solid red;/*for me*/
 }
 
 .program__title {
   padding: 20px 0;
   margin-bottom: 5px;
-  /*border: 1px solid green;/*for me*/
+  /*outline: 1px solid green;/*for me*/
 }
 
 /*.main-nav {
@@ -20,7 +20,7 @@
   @include font(14px, 18px);
   text-transform: uppercase;
   color: $darkgrey-color;
-  /*border: 1px solid violet;/*for me*/
+  /*outline: 1px solid violet;/*for me*/
 }
 
 .program__fieldset {
@@ -35,11 +35,10 @@
 
 .program__subtitle {
   padding: 30px 20px 30px 0;
-  padding-left: 0;
 
   @include font(24px, 24px);
   color: $darkgrey-color;
-  /*border: 1px solid violet;/*for me*/
+  /*outline: 1px solid violet;/*for me*/
 
   &--comment {
     padding: 16px 20px 34px 0;
@@ -134,6 +133,8 @@
 }
 
 .program__extra-list {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-bottom: 25px;
 }
@@ -157,6 +158,104 @@
   @include font(14px, 16px);
 }
 
-/*@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
+  .program__title {
+    margin-bottom: 35px;
+  }
 
-}*/
+  .program__text {
+    @include font(20px, 30px);
+    padding-left: 40px;
+    width: 60%;
+    margin-bottom: 64px;
+  }
+
+  .program__form {
+    padding: 0 40px;
+  }
+
+  .program__name {
+    @include font(20px, 20px);
+  }
+
+  .program__field {
+    @include font(20px, 20px);
+    padding-left: 20px;
+  }
+
+  .program__fieldset--cat {
+    margin-bottom: 55px;
+  }
+
+  .program__type-list {
+    padding: 16px 0;
+    margin-bottom: 46px;
+    border: 1px solid $lightgrey-color;
+  }
+
+  .program__list-item {
+    @include font(20px, 20px);
+    padding: 17px 0;
+    padding-left: 87px;
+
+    &--extra {
+      width: 50%;
+    }
+  }
+
+  .program__subtitle {
+    @include font(36px, 36px);
+    margin-bottom: 42px;
+  }
+
+  .program__comment {
+    @include font(20px, 30px);
+  }
+
+  .program__extra-list {
+    flex-direction: row;
+  }
+
+  .program__button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    padding: 15px 60px;
+  }
+
+  .program__requirements {
+    width: 50%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__text {
+    padding-left: 0;
+    width: 35%;
+  }
+
+  .program__form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .program__fieldset {
+    width: 100%;
+
+    &--cat {
+      width: 45%;
+    }
+
+    &--type {
+      width: 45%;
+    }
+  }
+
+  .program__list-item {
+    &--extra {
+      width: 25%;
+    }
+  }
+}

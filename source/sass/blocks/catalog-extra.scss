@@ -1,5 +1,5 @@
 .catalog-extra {
-  border: 1px solid red; /*for me*/
+  outline: 1px solid red; /*for me*/
 }
 
 .catalog-extra__title {
@@ -9,21 +9,21 @@
   @include font(24px, 24px);
   font-weight: 400;
   color: $darkgrey-color;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .catalog-extra__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid cyan;/*for me*/
+  outline: 1px solid cyan;/*for me*/
 }
 
 .catalog-extra__promo {
   position: relative;
   padding-top: 175px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 50% 0;
-  border: 1px solid blue;/*for me*/
+  outline: 1px solid blue;/*for me*/
 
   &::after {
     position: absolute;
@@ -44,7 +44,7 @@
   @include font();/*в макете auto!!*/
   text-align: center;
   color: #ffffff;
-  border: 1px solid cyan;/*for me*/
+  outline: 1px solid cyan;/*for me*/
 }
 
 @media (min-width: $tablet-width) {
@@ -71,7 +71,6 @@
   .catalog-extra__gift {
     padding: 0 55px;
     text-align: left;
-    border: 1px solid cyan;/*for me*/
   }
 }
 

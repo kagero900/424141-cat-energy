@@ -2,7 +2,7 @@
   display: flex;
   padding: 30px 0;
   align-items: center;
-  border: 1px solid blue;/*for me*/
+  outline: 1px solid blue;/*for me*/
 
   &--index {
     background-color: #ffffff;
@@ -16,7 +16,7 @@
 
   @include font();
   text-transform: uppercase;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .contacts__address {
@@ -27,7 +27,7 @@
 
   @include font(14px, 20px);
   color: $grey-color;
-  border: 1px solid violet;/*for me*/
+  outline: 1px solid violet;/*for me*/
 
   span {
     display: table;
@@ -64,8 +64,11 @@
 
 @media (min-width: $desktop-width) {
   .contacts__wrapper {
+    position: absolute;
     width: 570px;
     height: 195px;
     padding: 65px 75px;
+    top: 100px;
+    left: 40px;
   }
 }
