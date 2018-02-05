@@ -31,7 +31,6 @@
   &--cat {
     margin-bottom: 7px;
   }
-
 }
 
 .program__subtitle {
@@ -102,7 +101,6 @@
   flex-direction: column;
   align-content: space-between;
   margin: 0;
-  padding: 0;
   padding: 15px 0;
   list-style: none;
 }
@@ -123,7 +121,7 @@
 
 .program__comment {
   display: block;
-  width:100%;
+  width: 100%;
   padding: 14px 0 15px 15px;
   min-height: 150px;
   font-family: inherit;
@@ -159,6 +157,6 @@
   @include font(14px, 16px);
 }
 
-@media (min-width: $tablet-width) {
+/*@media (min-width: $tablet-width) {
 
-}
+}*/
