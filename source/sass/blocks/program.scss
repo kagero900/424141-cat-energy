@@ -44,7 +44,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 100vw;
     height: 3px;
     top: 50%;
@@ -127,11 +127,34 @@
 
 .program__list-item {
   padding: 12px;/*ideal!!*/
-  padding-left: 47px;
 
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222222;
+}
+
+.program__radio-name,
+.program__checkbox-name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 47px;
+  /*outline: 1px solid red;*/
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.program__radio-name {
+  border-radius: 50%;
 }
 
 .program__comment {
@@ -272,6 +295,10 @@
   .program__fieldset-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .program__field-wrapper {
+    width: 570px;
   }
 
   .program__subtitle {

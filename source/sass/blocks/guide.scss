@@ -114,12 +114,13 @@
       left: 50%;
       transform: translateX(-50%);
       font-family: $ffos;
+
       @include font(281px, 281px);
       color: $lightgrey-color;
       z-index: -1;
     }
 
-    &:nth-child(n+2){
+    &:nth-child(n+2) {
       margin-bottom: 60px;
     }
   }

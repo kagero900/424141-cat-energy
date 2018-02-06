@@ -1,7 +1,12 @@
 .catalog-main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   outline: 1px solid red;/*for me*/
+}
+
+.catalog-main__item {
+  margin-bottom: 25px;
 }
 
 .catalog-main__more {

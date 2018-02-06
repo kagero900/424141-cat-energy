@@ -55,9 +55,13 @@
     @include font();
     width: 50%;
   }
+
+  .extra-card__button {
+    width: 100%;
+  }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .extra-card {
     padding: 17px 0;
   }
