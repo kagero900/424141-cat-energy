@@ -1,53 +1,96 @@
 .program {
-  padding: 20px;
-  border: 1px solid red;/*for me*/
+  /*outline: 1px solid red;/*for me*/
 }
 
 .program__title {
-  border: 1px solid green;/*for me*/
+  padding: 20px 0;
+  margin-bottom: 5px;
+  /*outline: 1px solid green;/*for me*/
 }
 
 .program__text {
+  margin: 0;
+  margin-bottom: 39px;
+  padding-right: 50px;
+
   @include font(14px, 18px);
   text-transform: uppercase;
   color: $darkgrey-color;
-  border: 1px solid violet;/*for me*/
+  /*outline: 1px solid violet;/*for me*/
 }
 
 .program__fieldset {
   margin: 0;
   padding: 0;
-  border: 1px solid blue;/*for me*/
+  border: none;
+
+  &--cat {
+    margin-bottom: 7px;
+  }
 }
 
 .program__subtitle {
-  padding: 20px;
-  padding-left: 0;
+  position: relative;
+  padding: 30px 20px 30px 0;
+  background-color: #ffffff;
+  /*margin-left: calc((100vw - 1300px) / 2);not use
+  /*margin-right: auto;not use*/
+  /*padding-left: 40px;
+  margin-left: -40px;*/
 
   @include font(24px, 24px);
   color: $darkgrey-color;
-  border: 1px solid violet;/*for me*/
+  /*outline: 1px solid violet;/*for me*/
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    /*margin-left: -50vw;
+    margin-right: -50vw;*/
+    background-color: $green-color;
+    z-index: -1;
+  }
+
+  &--comment {
+    padding: 16px 20px 34px 0;/*убрать!!*/
+  }
+
+  &--extra {
+    padding-bottom: 25px;
+  }
 }
 
 .program__field-wrapper {
   display: flex;
-  border: 1px solid cyan;/*for me*/
+  margin-bottom: 14px;
 }
 
 .program__name {
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222222;
+  flex-shrink: 0;
+  display: flex;
+  align-self: center;
 }
 
 .program__field {
-  padding: 15px;
+  min-width: 172px;
+  margin-left: 15px;
+  flex-grow: 1;
+  padding: 13px;
   font-family: inherit;
 
   @include font(16px, 18px);
   text-transform: uppercase;
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: $grey-color;
+  border-radius: 0;
 
   &::placeholder {
     opacity: 1;
@@ -62,54 +105,215 @@
     border: 2px solid $grey-color;
   }
 
-  &:invalid {
+  &:focus:invalid { /*херня какая-то с ним*/
     border: 2px solid #ff8282;
   }
 }
 
-.program__type-list {
+.program__type-list,
+.program__extra-list {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
   list-style: none;
 }
 
+.program__type-list {
+  border-top: 1px solid $lightgrey-color;
+  border-bottom: 1px solid $lightgrey-color;
+}
+
 .program__list-item {
-  padding: 15px;
-  padding-left: 47px;
+  padding: 12px;/*ideal!!*/
 
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222222;
 }
 
+.program__radio-name,
+.program__checkbox-name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 47px;
+  /*outline: 1px solid red;*/
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.program__radio-name::before {
+  border-radius: 50%;
+}
+
 .program__comment {
-  padding: 15px;
+  display: block;
+  width: 100%;
+  padding: 14px 0 15px 15px;
+  min-height: 150px;
   font-family: inherit;
 
   @include font(16px, 18px);
   text-transform: uppercase;
   resize: none;
   color: inherit;
-  border: none;
+  border: 1px solid $lightgrey-color;
 }
 
 .program__extra-list {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
-  list-style: none;
+  margin-bottom: 25px;
 }
 
 .program__button {
   font-family: inherit;
-  width: 100%;
+  margin-top: 8px;
+  padding: 10px 75px 10px 80px;
   display: block;
   cursor: pointer;
   border: none;
 }
 
 .program__requirements {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px 60px;
   font-family: $ffas;
 
   @include font(14px, 16px);
-  border: 1px solid violet;/*for me*/
+}
+
+@media (min-width: $tablet-width) {
+  .program__title {
+    margin-bottom: 35px;
+  }
+
+  .program__text {
+    @include font(20px, 30px);
+    padding-left: 40px;
+    width: 60%;
+    margin-bottom: 64px;
+  }
+
+  .program__form {
+    padding: 0 40px;
+  }
+
+  .program__name {
+    @include font(20px, 20px);
+  }
+
+  .program__field {
+    @include font(20px, 20px);
+    padding-left: 20px;
+  }
+
+  .program__fieldset--cat {
+    margin-bottom: 55px;
+  }
+
+  .program__type-list {
+    padding: 16px 0;
+    margin-bottom: 46px;
+    border: 1px solid $lightgrey-color;
+  }
+
+  .program__list-item {
+    @include font(20px, 20px);
+    padding: 17px 0;
+    padding-left: 87px;
+
+    &--extra {
+      width: 50%;
+    }
+  }
+
+  .program__subtitle {
+    @include font(36px, 36px);
+    margin-bottom: 42px;
+  }
+
+  .program__comment {
+    @include font(20px, 30px);
+  }
+
+  .program__extra-list {
+    flex-direction: row;
+  }
+
+  .program__button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    padding: 15px 60px;
+  }
+
+  .program__requirements {
+    width: 50%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__text {
+    padding-left: 0;
+    width: 35%;
+  }
+
+  .program__form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .program__fieldset {
+    width: 100%;
+
+    &--cat {
+      width: 45%;
+    }
+
+    &--type {
+      width: 45%;
+    }
+  }
+
+  .program__fieldset-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program__field-wrapper {
+    width: 570px;
+  }
+
+  .program__subtitle {
+    padding-left: 40px;
+    margin-left: -40px;
+
+    &::after {
+      margin-left: 0;
+      margin-right: -50vw;
+    }
+  }
+
+  .program__list-item {
+    &--extra {
+      width: 25%;
+    }
+  }
 }

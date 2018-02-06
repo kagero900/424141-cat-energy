@@ -1,21 +1,57 @@
 .slider {
-  border: 1px solid red;/*for me*/
+  background-color: $lightgrey-color;
+  outline: 1px solid red;/*for me*/
+}
+
+.slider__control-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+  min-height: 80px;
 }
 
 .slider__control {
   @include font();
   text-transform: uppercase;
+  padding: 0 18px;
+  cursor: pointer;
 }
 
 .slider__scale {
+  position: relative;
   width: 85px;
   height: 14px;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
 
   &--inner {
+    position: absolute;
+    top: 4px;
+    left: 4px;
     width: 35px;
     height: 6px;
     background-color: $green-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    min-height: 630px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, $lightgrey-color 50%, #eaeaea 50%);
+    background-position: 0 170px;
+    background-repeat: no-repeat;
+  }
+
+  .slider__image {
+    margin: 0 auto;
+    width: 708px;
+    height: 517px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    background-position: 0 190px;
   }
 }

@@ -16,23 +16,63 @@
 }
 
 .main-nav__link {
-  padding-bottom: 2px;
-
   @include font(20px, 20px);
   font-weight: 500;
   text-transform: uppercase;
   color: $darkgrey-color;
 
   &:focus,
-  &:hover {
+  &[href]:hover {
     color: rgba(17, 17, 17, 0.6);
   }
 
-  &:active {
+  &[href]:active {
     color: rgba(17, 17, 17, 0.3);
   }
+}
 
-  &--active {
-    border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+
+  .main-nav__link {
+    @include font(18px, 24.86px);/*only tablet!!!*/
+
+    &--active {
+      padding-bottom: 4px;
+      border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    min-height: 120px;
+  }
+
+  .main-nav__link {
+    &--index {
+      color: #ffffff;
+
+      &:focus,
+      &[href]:hover {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &[href]:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .main-nav__link--index.main-nav__link--active {
+    border-color: #ffffff;
   }
 }

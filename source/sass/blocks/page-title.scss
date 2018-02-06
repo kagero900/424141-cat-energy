@@ -1,8 +1,14 @@
 .page-title {
   margin: 0;
   padding: 0;
-  font-size: 36px;
-  line-height: 60px;
+
+  @include font(36px, 60px);
   font-weight: 400;
   color: $darkgrey-color;
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    font-size: 60px;
+  }
 }

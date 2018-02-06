@@ -1,10 +1,22 @@
 .social {
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .social__list {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 180px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
-  border: 1px solid blue;/*for me*/
+  outline: 1px solid blue;/*for me*/
+}
+
+.social__link {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,8 +1,13 @@
 .copyright {
-  border: 1px solid blue;/*for me*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 1px solid blue;/*for me*/
 }
 
 .copyright__text {
+  display: inline-block;
+  vertical-align: middle;
   font-family: $ffas;
 
   @include font(16px, 16px);

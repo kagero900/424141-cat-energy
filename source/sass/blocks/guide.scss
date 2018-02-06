@@ -1,27 +1,137 @@
 .guide {
-  padding: 20px;
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .guide__title {
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .guide__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid blue;/*for me*/
+  outline: 1px solid blue;/*for me*/
 }
 
 .guide__item {
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;/*и чо с ним на ост версиях делать??*/
   padding-left: 80px;
+  padding-top: 5px;
+  min-height: 60px;
   font-family: $ffas;
 
   @include font(14px, 18px);
-  border: 1px solid orange;/*for me*/
+  outline: 1px solid orange;/*for me*/
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & span {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    content: "";
+  }
+
+  &--matter {
+    &::before {
+      background: url("../img/advantage-leaf@1x.png") no-repeat 50% 50%;
+      background-color: $green-color;
+    }
+  }
+
+  &--powder {
+    &::before {
+      background: url("../img/advantage-powder@1x.png") no-repeat 50% 50%;
+      background-color: $green-color;
+    }
+  }
+
+  &--changing {
+    &::before {
+      background: url("../img/advantage-dining@1x.png") no-repeat 50% 50%;
+      background-color: $green-color;
+    }
+  }
+
+  &--profit {
+    &::before {
+      background: url("../img/advantage-clock@1x.png") no-repeat 50% 50%;
+      background-color: $green-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .guide__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*width: 708px;
+    /*margin: 0 auto;*/
+  }
+
+  .guide__item {
+    display: flex;
+    width: 324px;
+    height: 230px;
+    padding-top: 115px;
+    padding-left: 0;
+    margin-bottom: 90px;
+
+    @include font(16px, 24px);
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    & p {
+      width: 76%;
+    }
+
+    & span {
+      display: block;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      height: 281px;
+      top: -38px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: $ffos;
+
+      @include font(281px, 281px);
+      color: $lightgrey-color;
+      z-index: -1;
+    }
+
+    &:nth-child(n+2) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide__list {
+    width: 1220px;
+  }
+
+  .guide__item {
+    width: 245px;
   }
 }

@@ -1,3 +1,12 @@
 .page-header {
-  border: 1px solid red;/*for me*/
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid red;/*for me*/
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

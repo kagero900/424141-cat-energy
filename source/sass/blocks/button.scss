@@ -1,5 +1,6 @@
 .button {
-  display: block;
+  /*display: block;*/
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -30,5 +31,11 @@
     &:active {
       color: $transgrey-color;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 20px;
   }
 }

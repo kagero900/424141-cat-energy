@@ -1,16 +1,20 @@
 .extra-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 14px;
   padding-bottom: 17px;
-  border: 1px solid red;/*for me*/
+  outline: 1px solid red;/*for me*/
 }
 
 .extra-card__title {
   margin: 0;
+  margin-bottom: 10px;
 
   @include font(16px, 16px);
   font-weight: 400;
   text-transform: uppercase;
-  border: 1px solid green;/*for me*/
+  outline: 1px solid green;/*for me*/
 }
 
 .extra-card__link {
@@ -18,8 +22,61 @@
 }
 
 .extra-card__info {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 15px;
   font-family: $ffas;
 
   @include font(12px, 16px);
-  border: 1px solid cyan;/*for me*/
+  outline: 1px solid cyan;/*for me*/
+}
+
+.extra-card__value {
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-card {
+    flex-direction: row;
+    padding: 25px 40px;
+    outline: 1px solid $lightgrey-color;
+
+    &:not(:last-child) {
+      border-bottom: none;/*or not*/
+    }
+  }
+
+  .extra-card__title {
+    @include font(20px, 20px);
+    width: 50%;
+  }
+
+  .extra-card__info {
+    @include font();
+    width: 50%;
+  }
+
+  .extra-card__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-card {
+    padding: 17px 0;
+  }
+
+  .extra-card__title {
+    width: 245px;
+    margin-right: 80px;
+  }
+
+  .extra-card__info {
+    width: 285px;
+    margin-right: 40px;
+  }
+
+  .extra-card__button {
+    width: 245px;
+  }
 }
