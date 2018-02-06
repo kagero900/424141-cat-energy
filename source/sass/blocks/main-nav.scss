@@ -1,5 +1,67 @@
 .main-nav {
+  position: relative;
   border: 1px solid blue;/*for me*/
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 65px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+  box-shadow:
+    0 8px 0 0 #222222,
+    0 16px 0 0 #222222;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: $darkgreen-color;
+  box-shadow:
+    0 8px 0 0 $darkgreen-color,
+    0 16px 0 0 $darkgreen-color;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #222222;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $darkgreen-color;
+  }
 }
 
 .main-nav__list {
