@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  outline: 1px solid blue;/*for me*/
 }
 
 .promo__title {
@@ -40,23 +41,25 @@
   }
 
   .promo__wrapper {
-    padding-left: 65px;
     align-items: flex-start;
   }
 
   .promo__title {
     @include font(60px, 60px);
     text-align: left;
+    margin-left: 90px;
     color: $darkgrey-color;
   }
 
   .promo__text {
     @include font(20px, 20px);
+    margin-left: 90px;
     color: $darkgrey-color;
   }
 
   .promo__button {
     @include font(20px, 20px);
+    margin-left: 90px;
     width: 241px;
     z-index: 1;
   }
@@ -65,30 +68,51 @@
     align-self: center;
     order: 1;
     margin-top: -40px;
-    margin-left: -65px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .promo {
-    min-height: 605px;/*for me*/
+  /*.promo {
     background-image:
-      url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to left, #65a93c 40%, #ffffff 40%);
+      linear-gradient(to left, #65a93c 47%, #ffffff 47%);
     background-repeat: no-repeat;
-    background-position: 100% -50px;
-  }
+    background-position: 100% 0;
+  }*/
 
   .promo__wrapper {
-    padding: 0;
+    position: relative;
+    margin-bottom: 110px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 680px;
+      height: 696px;
+      background: #65a93c url("../img/index-background-desktop@1x.jpg") no-repeat;
+      top: -120px;
+      left: 53%;
+      z-index: -1;
+    }
   }
 
   .promo__title {
     margin-top: 100px;
+    margin-left: 80px;
+    margin-bottom: 22px;
+  }
+
+  .promo__text {
+    margin-left: 80px;
+    margin-bottom: 52px;
+  }
+
+  .promo__button {
+    margin-left: 80px;
   }
 
   .promo__image {
-    margin-top: -270px;
-    margin-left: 80px;
+    margin-top: -350px;
+    margin-left: 240px;
+
   }
 }

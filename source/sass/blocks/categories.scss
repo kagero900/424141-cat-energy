@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid red;/*for me*/
+  /*outline: 1px solid red;/*for me*/
 }
 
 .categories__item {
@@ -13,7 +13,7 @@
   flex-direction: column;
   padding: 20px;
   background-color: $lightgrey-color;
-  outline: 1px solid blue;/*for me*/
+  /*outline: 1px solid blue;/*for me*/
 
   &:first-child {
     margin-bottom: 20px;
@@ -63,14 +63,14 @@
   font-weight: normal;
   text-transform: uppercase;
   color: $darkgrey-color;
-  outline: 1px solid green;/*for me*/
+  /*outline: 1px solid green;/*for me*/
 }
 
 .categories__text {
   font-family: $ffas;
 
   @include font(14px, 18px);
-  outline: 1px solid violet;/*for me*/
+  /*outline: 1px solid violet;/*for me*/
 }
 
 .categories__button {
@@ -82,11 +82,11 @@
   @include font(16px, 16px);
   text-transform: uppercase;
   color: $darkgrey-color;
-  /*background-color: transparent;*/
 }
 
 @media (min-width: $tablet-width) {
   .categories__item {
+    width: 708px;
     min-height: 370px;
 
     &::before {
@@ -138,11 +138,18 @@
 
 @media (min-width: $desktop-width) {
   .categories__list {
+    padding: 25px 0;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .categories__item {
+    width: 570px;
     padding-top: 70px;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
 
     &::before {
       top: 47px;

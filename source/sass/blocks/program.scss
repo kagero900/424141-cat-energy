@@ -8,10 +8,6 @@
   /*outline: 1px solid green;/*for me*/
 }
 
-/*.main-nav {
-  display: none;
-}*/
-
 .program__text {
   margin: 0;
   margin-bottom: 39px;
@@ -34,14 +30,34 @@
 }
 
 .program__subtitle {
+  position: relative;
   padding: 30px 20px 30px 0;
+  background-color: #ffffff;
+  /*margin-left: calc((100vw - 1300px) / 2);not use
+  /*margin-right: auto;not use*/
+  /*padding-left: 40px;
+  margin-left: -40px;*/
 
   @include font(24px, 24px);
   color: $darkgrey-color;
   /*outline: 1px solid violet;/*for me*/
 
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    /*margin-left: -50vw;
+    margin-right: -50vw;*/
+    background-color: $green-color;
+    z-index: -1;
+  }
+
   &--comment {
-    padding: 16px 20px 34px 0;
+    padding: 16px 20px 34px 0;/*убрать!!*/
   }
 
   &--extra {
@@ -250,6 +266,21 @@
 
     &--type {
       width: 45%;
+    }
+  }
+
+  .program__fieldset-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program__subtitle {
+    padding-left: 40px;
+    margin-left: -40px;
+
+    &::after {
+      margin-left: 0;
+      margin-right: -50vw;
     }
   }
 

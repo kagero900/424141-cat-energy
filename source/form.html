@@ -13,7 +13,7 @@
         <img class="logo__brand" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--active" type="button">Открыть/закрыть меню</button>
+        <button class="main-nav__toggle main-nav__toggle--active" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -65,13 +65,15 @@
           </fieldset>
           <fieldset class="program__fieldset">
             <legend class="program__subtitle">Контактные данные (владельца кота)</legend>
-            <div class="program__field-wrapper">
-              <label class="program__name" for="email">E-mail:*</label>
-              <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </div>
-            <div class="program__field-wrapper">
-              <label class="program__name" for="phone">Телефон:*</label>
-              <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+            <div class="program__fieldset-wrapper">
+              <div class="program__field-wrapper">
+                <label class="program__name" for="email">E-mail:*</label>
+                <input class="program__field program__field--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="program__field-wrapper">
+                <label class="program__name" for="phone">Телефон:*</label>
+                <input class="program__field program__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              </div>
             </div>
           </fieldset>
           <fieldset class="program__fieldset">

@@ -22,11 +22,11 @@
   color: $darkgrey-color;
 
   &:focus,
-  &:hover {
+  &[href]:hover {
     color: rgba(17, 17, 17, 0.6);
   }
 
-  &:active {
+  &[href]:active {
     color: rgba(17, 17, 17, 0.3);
   }
 }
@@ -48,6 +48,29 @@
     &--active {
       padding-bottom: 4px;
       border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    min-height: 120px;
+  }
+
+  .main-nav__link {
+    color: #ffffff;
+
+    &:focus,
+    &[href]:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &[href]:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--active {
+      border-color: #ffffff;
     }
   }
 }

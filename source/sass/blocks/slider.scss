@@ -42,6 +42,12 @@
     background-position: 0 170px;
     background-repeat: no-repeat;
   }
+
+  .slider__image {
+    margin: 0 auto;
+    width: 708px;
+    height: 517px;
+  }
 }
 
 @media (min-width: $desktop-width) {

@@ -1,5 +1,5 @@
 body {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $ffos;
 
   @include font();/*как доделаю - посчитаю, каких размеров больше*/
   color: $grey-color;
