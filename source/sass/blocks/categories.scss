@@ -4,16 +4,14 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  /*outline: 1px solid red;/*for me*/
 }
 
 .categories__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 32px 20px 0 20px;
   background-color: $lightgrey-color;
-  /*outline: 1px solid blue;/*for me*/
 
   &:first-child {
     margin-bottom: 20px;
@@ -21,7 +19,7 @@
 
   &::before {
     position: absolute;
-    top: 22px;
+    top: 25px;
     left: 22px;
     width: 50px;
     height: 50px;
@@ -59,24 +57,25 @@
 .categories__title {
   @include font(24px, 37px);
   margin: 0;
-  padding-left: 92px;
+  margin-bottom: 28px;
+  padding-left: 72px;
   font-weight: normal;
   text-transform: uppercase;
   color: $darkgrey-color;
-  /*outline: 1px solid green;/*for me*/
 }
 
 .categories__text {
+  margin: 0;
+  margin-bottom: 23px;
   font-family: $ffas;
 
   @include font(14px, 18px);
-  /*outline: 1px solid violet;/*for me*/
 }
 
 .categories__button {
-  display: block;
   margin-top: auto;
   padding-top: 20px;
+  padding-bottom: 21px;
   border-top: 1px solid #d9d9d9;
 
   @include font(16px, 16px);
@@ -84,10 +83,43 @@
   color: $darkgrey-color;
 }
 
+.categories__button span {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24.4px;
+    height: 11px;
+    top: 3px;
+    right: 9px;
+    background: url("../img/icon-right-arrow.svg") no-repeat;
+  }
+
+  &:hover::before {
+    width: 32.4px;
+    right: 0;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
 @media (min-width: $tablet-width) {
   .categories__item {
     width: 708px;
-    min-height: 370px;
+    min-height: 372px;
+    padding: 77px 0 41px 52px;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
 
     &::before {
       left: auto;
@@ -120,6 +152,7 @@
 
   .categories__title {
     padding-left: 0;
+    margin-bottom: 24px;
 
     @include font(36px, 37px);
   }
@@ -127,11 +160,20 @@
   .categories__text {
     @include font(16px, 24px);
     margin-right: 320px;
+    width: 57%;
+  }
+
+  .categories__item--pro .categories__text {
+    width: 52%;
   }
 
   .categories__button {
     @include font(20px, 20px);
     border: none;
+
+    & span {
+      padding-right: 57px;
+    }
   }
 }
 
@@ -145,7 +187,7 @@
 
   .categories__item {
     width: 570px;
-    padding-top: 70px;
+    padding-right: 40px;
 
     &:first-child {
       margin-bottom: 0;
@@ -178,12 +220,16 @@
   }
 
   .categories__title {
-    padding-left: 215px;
-    margin-bottom: 75px;
+    padding-left: 162px;
+    margin-bottom: 74px;
   }
 
   .categories__text {
     margin: 0;
-    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .categories__item--pro .categories__text {
+    width: 100%;
   }
 }

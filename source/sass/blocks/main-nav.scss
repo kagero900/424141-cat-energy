@@ -1,6 +1,5 @@
 .main-nav {
   position: relative;
-  border: 1px solid blue;/*for me*/
 }
 
 .main-nav__toggle {
@@ -68,13 +67,23 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid green;/*for me*/
 }
 
 .main-nav__item {
-  padding: 20px;
+  position: relative;
+  padding: 22px;
   text-align: center;
-  border: 1px solid cyan;/*for me*/
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: $lightgrey-color;
+  }
 }
 
 .main-nav__link {
@@ -93,6 +102,20 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-nav__toggle {
     display: none;
@@ -102,13 +125,28 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    padding: 43px 0 46px;
+  }
+
+  .main-nav__item {
+    padding: 0;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .main-nav__link {
     @include font(18px, 24.86px);/*only tablet!!!*/
+    font-weight: 400;
 
     &--active {
-      padding-bottom: 4px;
+      padding-bottom: 5px;
       border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
     }
   }
@@ -119,7 +157,13 @@
     min-height: 120px;
   }
 
+  .main-nav__list {
+    padding: 73px 0 6px;
+  }
+
   .main-nav__link {
+    font-size: 20px;
+
     &--index {
       color: #ffffff;
 

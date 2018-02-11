@@ -2,11 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  outline: 1px solid red;/*for me*/
 }
 
 .catalog-main__item {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: $lightgrey-color;
+  }
 }
 
 .catalog-main__more {
@@ -17,7 +27,6 @@
   padding-top: 80px;
   width: 280px;
   height: 210px;
-  outline: 1px solid blue;/*for me*/
 
   &::after {
     position: absolute;
@@ -39,7 +48,6 @@
   @include font();
   color: $darkgrey-color;
   text-transform: uppercase;
-  outline: 1px solid green;/*for me*/
 }
 
 .catalog-main__more-text {
@@ -48,7 +56,6 @@
 
   @include font(12px, 16px);
   color: $grey-color;
-  outline: 1px solid violet;/*for me*/
 }
 
 .catalog-main__to-all {

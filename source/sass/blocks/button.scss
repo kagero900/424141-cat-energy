@@ -1,8 +1,8 @@
 .button {
   /*display: block;*/
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;/*если в каталоге жопа - поменять в промобатоне*/
   text-align: center;
 
   @include font();

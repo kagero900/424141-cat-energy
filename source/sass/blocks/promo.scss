@@ -1,34 +1,36 @@
 .promo {
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(#63a73a 66%, #ffffff 66%);
+    linear-gradient(#63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat;
   background-position: 50% 0;
-  outline: 1px solid red;/*for me*/
 }
 
 .promo__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid blue;/*for me*/
+  padding-top: 26px;
+  padding-bottom: 22px;
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 26px;
 
   @include font(36px, 36px);
   font-weight: 400;
   text-align: center;
   color: #ffffff;
-  outline: 1px solid green;/*for me*/
 }
 
 .promo__text {
+  margin: 0;
+  margin-bottom: 28px;
+
   @include font(14px, 14px);
   text-transform: uppercase;
   color: #ffffff;
-  outline: 1px solid violet;/*for me*/
 }
 
 .promo__button {
@@ -42,32 +44,37 @@
 
   .promo__wrapper {
     align-items: flex-start;
+    padding-bottom: 0;
   }
 
   .promo__title {
     @include font(60px, 60px);
     text-align: left;
-    margin-left: 90px;
+    margin-left: 87px;
+    margin-bottom: 41px;
     color: $darkgrey-color;
   }
 
   .promo__text {
     @include font(20px, 20px);
-    margin-left: 90px;
+    margin-left: 87px;
+    margin-bottom: 44px;
     color: $darkgrey-color;
   }
 
   .promo__button {
     @include font(20px, 20px);
-    margin-left: 90px;
-    width: 241px;
+    margin-left: 89px;
+    padding: 16px 0;
+    width: 245px;
     z-index: 1;
   }
 
   .promo__image {
+    line-height: 0;
     align-self: center;
     order: 1;
-    margin-top: -40px;
+    margin-top: -75px;
   }
 }
 
@@ -81,7 +88,7 @@
 
   .promo__wrapper {
     position: relative;
-    margin-bottom: 110px;
+    margin-bottom: 92px;
 
     &::after {
       position: absolute;
@@ -96,9 +103,8 @@
   }
 
   .promo__title {
-    margin-top: 100px;
+    margin-top: 77px;
     margin-left: 80px;
-    margin-bottom: 22px;
   }
 
   .promo__text {
@@ -107,7 +113,7 @@
   }
 
   .promo__button {
-    margin-left: 80px;
+    margin-left: 79px;
   }
 
   .promo__image {

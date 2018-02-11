@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   width: 240px;
-  outline: 1px solid violet;/*for me*/
 
   &:hover {
     opacity: 0.8;
@@ -22,4 +21,27 @@
   width: 100px;
   height: 18px;
   margin-left: 57px;
+
+  &--footer {
+    width: 127.8px;
+    height: 23.4px;
+    margin-left: 75px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    width: 203px;
+  }
+
+  .logo__brand {
+    width: 84px;
+    height: 16px;
+
+    &--footer {
+      width: 127.8px;
+      height: 23.4px;
+      margin-left: 0;
+    }
+  }
 }
