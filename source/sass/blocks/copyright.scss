@@ -2,14 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: 1px solid blue;/*for me*/
 }
 
 .copyright__text {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   font-family: $ffas;
+  word-spacing: -2px;
 
   @include font(16px, 16px);
   color: $grey-color;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 23px;
+  }
 }

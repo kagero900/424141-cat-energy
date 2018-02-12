@@ -1,9 +1,10 @@
 .guide {
-  outline: 1px solid red;/*for me*/
+  padding-top: 18px;
+  padding-bottom: 42px;
 }
 
 .guide__title {
-  outline: 1px solid green;/*for me*/
+  margin-bottom: 27px;
 }
 
 .guide__list {
@@ -12,19 +13,17 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid blue;/*for me*/
 }
 
 .guide__item {
   position: relative;
-  margin-bottom: 20px;/*и чо с ним на ост версиях делать??*/
+  margin-bottom: 20px;
   padding-left: 80px;
   padding-top: 5px;
   min-height: 60px;
   font-family: $ffas;
 
   @include font(14px, 18px);
-  outline: 1px solid orange;/*for me*/
 
   &:last-child {
     margin-bottom: 0;
@@ -77,6 +76,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .guide {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+
+  .guide__title {
+    margin-bottom: 71px;
+  }
+
   .guide__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -88,10 +96,10 @@
   .guide__item {
     display: flex;
     width: 324px;
-    height: 230px;
-    padding-top: 115px;
+    height: 228px;
+    padding-top: 112px;
     padding-left: 0;
-    margin-bottom: 90px;
+    margin-bottom: 89px;
 
     @include font(16px, 24px);
 
@@ -111,8 +119,7 @@
       padding: 0;
       height: 281px;
       top: -38px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 114px;
       font-family: $ffos;
 
       @include font(281px, 281px);
@@ -127,11 +134,33 @@
 }
 
 @media (min-width: $desktop-width) {
+  .guide {
+    padding-top: 50px;
+  }
+
   .guide__list {
-    width: 1220px;
+    /*width: 1220px;*/
   }
 
   .guide__item {
     width: 245px;
+    margin-bottom: 25px;
+
+    &:nth-child(n+2) {
+      margin-bottom: 25px;
+    }
+
+    & p {
+      width: 100%;
+    }
+
+    & span {
+      left: auto;
+      right: 0;
+    }
+
+    &:first-child span {
+      right: 17px;
+    }
   }
 }

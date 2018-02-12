@@ -1,16 +1,10 @@
-.social {
-  outline: 1px solid red;/*for me*/
-}
-
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 180px;
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  outline: 1px solid blue;/*for me*/
 }
 
 .social__link {

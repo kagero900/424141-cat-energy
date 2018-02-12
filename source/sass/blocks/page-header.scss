@@ -1,12 +1,31 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
-  outline: 1px solid red;/*for me*/
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: $lightgrey-color;
+  }
+}
+
+.page-header__logo {
+  min-height: 65px;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
   }
 }

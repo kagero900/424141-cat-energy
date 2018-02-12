@@ -9,10 +9,14 @@
   <body>
     <header class="page-header container">
       <a class="page-header__logo logo">
-        <img class="logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+        <picture class="logo__image">
+          <source media="(min-width: 1300px)" srcset="img/icon-logo-mobile.svg">
+          <source media="(min-width: 768px)" srcset="img/icon-logo-mobile.svg">
+          <img class="logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+        </picture>
         <img class="logo__brand" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -46,17 +50,17 @@
           <li class="categories__item categories__item--slim">
             <h3 class="categories__title">Похудение</h3>
             <p class="categories__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="categories__button" href="catalog.html">Каталог Slim</a>
+            <a class="categories__button" href="catalog.html"><span>Каталог Slim</span></a>
           </li>
           <li class="categories__item categories__item--pro">
             <h3 class="categories__title">Набор массы</h3>
             <p class="categories__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="categories__button" href="catalog.html">Каталог Pro</a>
+            <a class="categories__button" href="catalog.html"><span>Каталог Pro</span></a>
           </li>
         </ul>
       </section>
       <section class="guide container">
-        <h3 class="guide__title page-title">Как это работает?</h3>
+        <h3 class="guide__title page-title">Как это работает</h3>
         <ul class="guide__list">
           <li class="guide__item guide__item--matter">
             <p>Функциональное питание содержит только полезные питательные вещества.</p>
@@ -71,7 +75,7 @@
             <span>3</span>
           </li>
           <li class="guide__item guide__item--profit">
-            <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
             <span>4</span>
           </li>
         </ul>
@@ -89,7 +93,7 @@
                 </li>
                 <li class="example__item">
                   <span class="example__value">60 дней</span>
-                  <span class="example__made">Затрачено времени</span>
+                  <span class="example__made example__made--time">Затрачено времени</span>
                 </li>
               </ul>
               <div class="example__costs">
@@ -99,7 +103,10 @@
             </div>
           </div>
           <div class="example__slider slider">
-            <img class="slider__image" src="http://placehold.it/320x240" width="320" height="240" alt="Очень толстый котик">
+            <div class="slider__images">
+              <img class="slider__image slider__image--before" src="../img/before-mobile@1x.png" width="320" height="240" alt="Очень толстый котик">
+              <img class="slider__image slider__image--after" src="../img/after-mobile@1x.png" width="320" height="240" alt="Похудевший котик">
+            </div>
             <div class="slider__control-wrapper">
               <input class="visually-hidden" type="radio" id="before" name="changing" checked>
               <label class="slider__control" for="before">Было</label>
@@ -127,8 +134,8 @@
       </div>
       <section class="page-footer__block-group">
         <div class="page-footer__wrapper container">
-          <a class="page-footer__logo logo logo--footer">
-            <img class="logo__brand" src="img/logo-footer.svg" width="130" height="24" alt="Cat Energy">
+          <a class="page-footer__logo logo">
+            <img class="logo__brand logo__brand--footer" src="img/logo-footer.svg" width="130" height="24" alt="Cat Energy">
           </a>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -159,5 +166,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

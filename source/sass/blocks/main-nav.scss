@@ -1,18 +1,89 @@
 .main-nav {
-  border: 1px solid blue;/*for me*/
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 65px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+  box-shadow:
+    0 8px 0 0 #222222,
+    0 16px 0 0 #222222;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: $darkgreen-color;
+  box-shadow:
+    0 8px 0 0 $darkgreen-color,
+    0 16px 0 0 $darkgreen-color;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #222222;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $darkgreen-color;
+  }
 }
 
 .main-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid green;/*for me*/
 }
 
 .main-nav__item {
-  padding: 20px;
+  position: relative;
+  padding: 22px;
   text-align: center;
-  border: 1px solid cyan;/*for me*/
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: $lightgrey-color;
+  }
 }
 
 .main-nav__link {
@@ -31,6 +102,20 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-nav__toggle {
     display: none;
@@ -40,13 +125,28 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    padding: 43px 0 46px;
+  }
+
+  .main-nav__item {
+    padding: 0;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .main-nav__link {
     @include font(18px, 24.86px);/*only tablet!!!*/
+    font-weight: 400;
 
     &--active {
-      padding-bottom: 4px;
+      padding-bottom: 5px;
       border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
     }
   }
@@ -57,7 +157,13 @@
     min-height: 120px;
   }
 
+  .main-nav__list {
+    padding: 73px 0 6px;
+  }
+
   .main-nav__link {
+    font-size: 20px;
+
     &--index {
       color: #ffffff;
 

@@ -1,51 +1,38 @@
 .catalog-extra {
-  outline: 1px solid red; /*for me*/
+  margin-bottom: 20px;
 }
 
 .catalog-extra__title {
   position: relative;
   margin: 0;
-  padding: 30px 0;
+  padding-top: 29px;
+  padding-bottom: 33px;
   width: 248px;
   background-color: #ffffff;
 
   @include font(24px, 24px);
   font-weight: 400;
   color: $darkgrey-color;
-  outline: 1px solid green;/*for me*/
-
-  /*&::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 3px;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    /*margin-left: -50vw;
-    margin-right: -50vw;
-    background-color: $green-color;
-    z-index: -1;
-  }*/
 }
 
 .catalog-extra__list {
   margin: 0;
+  margin-bottom: 39px;
   padding: 0;
   list-style: none;
-  outline: 1px solid cyan;/*for me*/
+  border-top: 1px solid #cdcdcd;
 }
 
 .catalog-extra__promo {
   position: relative;
-  padding-top: 175px;
+  padding-top: 173px;
+  padding-bottom: 45px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 50% 0;
-  outline: 1px solid blue;/*for me*/
 
   &::after {
     position: absolute;
     content: "";
-    top: 50px;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     width: 56px;
@@ -58,23 +45,51 @@
   padding: 0 55px;
   font-family: $ffas;
 
-  @include font();/*в макете auto!!*/
+  @include font(16px, 19px);/*в макете auto!!*/
   text-align: center;
   color: #ffffff;
-  outline: 1px solid cyan;/*for me*/
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__extra {
+    margin-bottom: 76px;
+  }
+
+  .catalog-extra__list {
+    border: none;
+    margin-bottom: 68px;
+  }
+
   .catalog-extra__title {
-    width: 367px;
-    padding: 55px 0;
+    width: 420px;
+    padding: 49px 37px;
+    margin-bottom: 30px;
 
     @include font(36px, 36px);
 
-    /*&::after {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 3px;
+      top: 70px;
+      left: 50%;
       margin-left: -50vw;
+      background-color: $green-color;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 3px;
+      top: 70px;
+      right: 50%;
       margin-right: -50vw;
-    }*/
+      background-color: $green-color;
+      z-index: -1;
+    }
   }
 
   .catalog-extra__promo {
@@ -83,16 +98,19 @@
     padding: 0;
     padding-left: 423px;
     height: 200px;
+    background: url("../img/gift-photo-mobile@1x.jpg") no-repeat 50% 0;
+    /*не забыть сменить картинку!!*/
     background-color: $green-color;
 
     &::after {
-      top: 65px;
-      left: 90px;
+      top: 66px;
+      left: 119px;
     }
   }
 
   .catalog-extra__gift {
-    padding: 0 55px;
+    padding-left: 0;
+    padding-right: 105px;
     text-align: left;
   }
 }
@@ -101,24 +119,30 @@
   .catalog-extra {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 86px;
   }
 
-  /*.catalog-extra__title {
-
-
-  }*/
+  .catalog-extra__title {
+    padding: 53px 0;
+  }
 
   .catalog-extra__list {
-    width: 895px;
-    flex-shrink: 0;
-    margin-right: 40px;
+    margin-right: 80px;
+    margin-bottom: 0;
   }
 
   .catalog-extra__promo {
     width: 245px;
     height: 287px;
     flex-direction: column;
-    padding: 190px 42px 0 42px;
+    padding: 171px 42px 0 42px;
+    /*margin-bottom: 0;*/
+    /*background: тут чо третья картинка??;*/
+
+    &::after {
+      top: 65px;
+      left: 124px;
+    }
   }
 
   .catalog-extra__gift {
