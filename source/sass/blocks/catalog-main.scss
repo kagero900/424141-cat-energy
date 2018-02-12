@@ -1,22 +1,14 @@
 .catalog-main {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .catalog-main__item {
+  position: relative;
   margin-bottom: 24px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 1px;
-    top: 0;
-    left: 50%;
-    margin-left: -50vw;
-    background-color: $lightgrey-color;
-  }
 }
 
 .catalog-main__more {
@@ -27,6 +19,8 @@
   padding-top: 80px;
   width: 280px;
   height: 210px;
+  margin-bottom: 24px;
+  text-align: center;
 
   &::after {
     position: absolute;
@@ -43,7 +37,7 @@
 
 .catalog-main__more-title {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   @include font();
   color: $darkgrey-color;
@@ -60,28 +54,84 @@
 
 .catalog-main__to-all {
   margin-top: auto;
-  margin-bottom: 25px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .catalog-main__item,
+  .catalog-main__more {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      top: 0;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #ededed;
+    }
+  }
+
+  .catalog-main::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: #ededed;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .catalog-main__item {
+    margin-bottom: 18px;
+  }
+
   .catalog-main__more {
+    padding: 163px 40px 40px;
     width: 324px;
-    height: 593px;/*но это не точно:)*/
+    height: 432px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 55px;
+    }
   }
 
   .catalog-main__more-title {
     font-size: 20px;
+    padding: 0 40px;
+    margin-bottom: 25px;
   }
 
   .catalog-main__more-text {
-    font-size: 16px;
-    /*line-height: auto!!!;*/
+    @include font(16px, 19px);
+    padding: 0 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .catalog-main__item {
+    margin-bottom: 20px;
+  }
+
   .catalog-main__more {
     width: 245px;
-    height: 593px;/*но это не точно:)*/
+    height: 432px;
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 20px;
+  }
+
+  .catalog-main__more-title {
+    padding: 0;
+  }
+
+  .catalog-main__more-text {
+    padding: 0;
   }
 }

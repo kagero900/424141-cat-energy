@@ -35,6 +35,9 @@
 
 .promo__button {
   @include font(14px, 18px);
+
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 @media (min-width: $tablet-width) {

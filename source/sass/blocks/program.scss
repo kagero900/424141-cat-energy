@@ -1,10 +1,11 @@
 .program {
+  margin-bottom: 10px;
   /*outline: 1px solid red;/*for me*/
 }
 
 .program__title {
-  padding: 20px 0;
-  margin-bottom: 5px;
+  padding: 16px 0;
+  margin-bottom: 8px;
   /*outline: 1px solid green;/*for me*/
 }
 
@@ -25,13 +26,17 @@
   border: none;
 
   &--cat {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
+  }
+
+  &--extra {
+    margin-bottom: 30px;
   }
 }
 
 .program__subtitle {
   position: relative;
-  padding: 30px 20px 30px 0;
+  padding: 30px 20px 33px 0;
   background-color: #ffffff;
   /*margin-left: calc((100vw - 1300px) / 2);not use
   /*margin-right: auto;not use*/
@@ -57,15 +62,16 @@
   }
 
   &--comment {
-    padding: 16px 20px 34px 0;/*убрать!!*/
+    padding: 15px 20px 34px 0;/*убрать!!*/
   }
 
   &--extra {
-    padding-bottom: 25px;
+    padding: 28px 20px 28px 0;
   }
 }
 
 .program__field-wrapper {
+  position: relative;
   display: flex;
   margin-bottom: 14px;
 }
@@ -103,10 +109,38 @@
   &:focus,
   &:active {
     border: 2px solid $grey-color;
+    outline: none;
+
+    & ~ .program__icon {
+      fill: $green-color;
+    }
   }
 
   &:focus:invalid { /*херня какая-то с ним*/
     border: 2px solid #ff8282;
+
+    & ~ .program__icon {
+      fill: #ff8282;
+    }
+  }
+}
+
+.program__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  &--email {
+    right: 15px;
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone {
+    right: 12px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -116,18 +150,39 @@
   flex-direction: column;
   align-content: space-between;
   margin: 0;
-  padding: 15px 0;
+  padding: 16px 0 17px;
   list-style: none;
 }
 
 .program__type-list {
-  border-top: 1px solid $lightgrey-color;
-  border-bottom: 1px solid $lightgrey-color;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: $lightgrey-color;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 }
 
-.program__list-item {
-  padding: 12px;/*ideal!!*/
+/*.program__type-list {
+  border-top: 1px solid $lightgrey-color;
+  border-bottom: 1px solid $lightgrey-color;
+}*/
 
+.program__list-item {
   @include font(16px, 18px);
   text-transform: uppercase;
   color: #222222;
@@ -139,13 +194,14 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 12px;/*ideal!!*/
   padding-left: 47px;
-  /*outline: 1px solid red;*/
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 30px;
     height: 30px;
@@ -157,10 +213,43 @@
   border-radius: 50%;
 }
 
+.program__radio-input:checked + .program__radio-name::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $green-color;
+}
+
+.program__checkbox-input:checked + .program__checkbox-name::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 21.1px;
+  height: 15.5px;
+  background: url("../img/icon-tick.svg") no-repeat center 0;
+}
+
+.program__radio-name:hover::before,
+.program__checkbox-name:hover::before {
+  border-color: #bababa;
+}
+
+.program__radio-name:active,
+.program__checkbox-name:active {
+  opacity: 0.3;
+}
+
 .program__comment {
   display: block;
   width: 100%;
-  padding: 14px 0 15px 15px;
+  padding: 13px;
   min-height: 150px;
   font-family: inherit;
 
@@ -175,12 +264,10 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 25px;
 }
 
 .program__button {
   font-family: inherit;
-  margin-top: 8px;
   padding: 10px 75px 10px 80px;
   display: block;
   cursor: pointer;
@@ -191,26 +278,35 @@
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  padding: 20px 60px;
+  padding: 22px 60px;
   font-family: $ffas;
 
   @include font(14px, 16px);
 }
 
 @media (min-width: $tablet-width) {
+  .program {
+    margin-bottom: 70px;
+  }
+
   .program__title {
-    margin-bottom: 35px;
+    padding: 26px 0;
+    margin-bottom: 30px;
   }
 
   .program__text {
     @include font(20px, 30px);
     padding-left: 40px;
     width: 60%;
-    margin-bottom: 64px;
+    margin-bottom: 65px;
   }
 
   .program__form {
     padding: 0 40px;
+  }
+
+  .program__field-wrapper {
+    margin-bottom: 21px;
   }
 
   .program__name {
@@ -220,57 +316,121 @@
   .program__field {
     @include font(20px, 20px);
     padding-left: 20px;
+    height: 51px;
   }
 
-  .program__fieldset--cat {
-    margin-bottom: 55px;
+  .program__fieldset {
+    &--cat {
+      margin-bottom: 53px;
+    }
+
+    &--type {
+      margin-bottom: 46px;
+    }
+
+    &--contacts {
+      margin-bottom: 30px;
+    }
+
+    &--comments {
+      margin-bottom: 60px;
+    }
+
+    &--extra {
+      margin-bottom: 34px;
+    }
   }
 
   .program__type-list {
-    padding: 16px 0;
-    margin-bottom: 46px;
-    border: 1px solid $lightgrey-color;
+    padding-left: 27px;
+
+    border: 1px solid #cdcdcd;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .program__list-item {
     @include font(20px, 20px);
-    padding: 17px 0;
-    padding-left: 87px;
 
     &--extra {
-      width: 50%;
+      min-width: 284px;
+      padding: 9px 0;
+
+      &:nth-child(2n) {
+        margin-left: 60px;
+      }
     }
+  }
+
+  .program__radio-name,
+  .program__checkbox-name {
+    padding: 17px;
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .program__radio-input:checked + .program__radio-name::after {
+    width: 17px;
+    height: 17px;
+    left: 12px;
   }
 
   .program__subtitle {
     @include font(36px, 36px);
     margin-bottom: 42px;
+
+    &--extra {
+      margin-bottom: 13px;
+    }
   }
 
   .program__comment {
     @include font(20px, 30px);
+    padding: 8px 18px;
   }
 
   .program__extra-list {
     flex-direction: row;
   }
 
+  .program__checkbox-input:checked + .program__checkbox-name::after {
+    left: 10px;
+  }
+
   .program__button {
     display: inline-block;
     vertical-align: middle;
-    width: 45%;
+    width: 283px;
     padding: 15px 60px;
+    font-size: 20px;
   }
 
   .program__requirements {
-    width: 50%;
-    font-size: 16px;
+    padding: 20px 58px;
+
+    @include font(16px, 16px);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .program {
+    margin-bottom: 85px;
+  }
+
+  .program__title {
+    padding: 69px 0 23px;
+  }
+
   .program__text {
     padding-left: 0;
+    margin-bottom: 68px;
     width: 35%;
   }
 
@@ -284,11 +444,22 @@
     width: 100%;
 
     &--cat {
-      width: 45%;
+      width: 570px;
+      margin-bottom: 0;
     }
 
     &--type {
-      width: 45%;
+      width: 570px;
+      margin-left: auto;
+      margin-bottom: 37px;
+    }
+
+    &--comments {
+      margin-bottom: 65px;
+    }
+
+    &--extra {
+      margin-bottom: 45px;
     }
   }
 
@@ -311,9 +482,27 @@
     }
   }
 
+  .program__extra-list {
+    justify-content: space-between;
+  }
+
   .program__list-item {
-    &--extra {
-      width: 25%;
+    &--extra:nth-child(2n) {
+      margin-left: 0;
     }
+
+    &--extra {
+      min-width: 245px;
+    }
+  }
+
+  .program__button {
+    width: 570px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .program__requirements {
+    padding: 18px 81px;
   }
 }

@@ -1,19 +1,14 @@
 .catalog-card {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 280px;
   min-height: 185px;
 }
 
-.catalog-card__image {
+.catalog-card__image img {
   display: block;
-
-  & img {
-    display: block;
-    width: 140px;
-    height: 144px;
-  }
+  width: 140px;
+  height: 144px;
 }
 
 .catalog-card__group {
@@ -26,7 +21,7 @@
 .catalog-card__title {
   padding-right: 55px;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 
   @include font();
   font-weight: 400;
@@ -64,8 +59,6 @@
 }
 
 .catalog-card__button {
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin-top: auto;
 }
 
@@ -73,15 +66,32 @@
   .catalog-card {
     flex-direction: column;
     width: 324px;
-    min-height: 593px;
+    min-height: 553px;
     padding: 40px;
     align-items: center;
+    background-image: linear-gradient(to bottom, #ffffff 122px, $lightgrey-color 122px);
+    background-repeat: no-repeat;
+    outline: 1px solid red;
+  }
+
+  .catalog-card__image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 208px;
+    margin-bottom: 15px;
+  }
+
+  .catalog-card__image img {
+    width: 100%;
+    height: auto;
   }
 
   .catalog-card__title {
     font-size: 20px;
     text-align: center;
     padding: 0 55px;
+    margin-bottom: 20px;
   }
 
   .catalog-card__group {
@@ -89,17 +99,45 @@
   }
 
   .catalog-card__info {
+    width: 250px;
     font-size: 16px;
+
+    & tr {
+      width: 100%;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    & td {
+      width: 125px;
+      padding: 8px 0 7px 0;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog-card {
     width: 245px;
-    min-height: 593px;
+    min-height: 553px;
+    padding: 38px;
+    padding-bottom: 40px;
   }
 
   .catalog-card__title {
     padding: 0 15px;
+  }
+
+  .catalog-card__info {
+    width: 170px;
+    font-size: 16px;
+
+    & tr {
+      width: 100%;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    & td {
+      width: 85px;
+      padding: 8px 0 7px 0;
+    }
   }
 }

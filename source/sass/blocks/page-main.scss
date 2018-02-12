@@ -3,4 +3,16 @@
   margin-bottom: 29px;
   /*outline: 1px solid blue;/*for me*/
 }
-/*чота тайтл тут не в тему ваще*/
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    padding-top: 25px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    padding-top: 67px;
+  }
+}
