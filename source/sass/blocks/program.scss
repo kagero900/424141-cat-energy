@@ -241,8 +241,8 @@
   border-color: #bababa;
 }
 
-.program__radio-name:active,
-.program__checkbox-name:active {
+.program__radio-name:disabled,
+.program__checkbox-name:disabled {
   opacity: 0.3;
 }
 
