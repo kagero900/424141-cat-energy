@@ -16,7 +16,14 @@
   height: 0;
   padding-bottom: 362px;
   overflow: hidden;
-  background: #fcf7ef url("../img/map-pin.png") no-repeat 45% 45%;
+  background-color: #fcf7ef;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 }
 
 .page-footer__map iframe {
@@ -35,7 +42,6 @@
 .page-footer__logo {
   padding-top: 39px;
   padding-bottom: 31px;
-  /*border-bottom: 1px solid #d9d9d9;*/
 }
 
 .page-footer__social {
@@ -49,14 +55,16 @@
 
 .page-footer__copyright {
   height: 78px;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__map {
     padding-bottom: 396px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   .page-footer__wrapper {
@@ -87,6 +95,11 @@
 
   .page-footer__map {
     padding-bottom: 400px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 
   .page-footer__logo {

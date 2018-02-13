@@ -4,12 +4,13 @@
 
 .example__cover {
   margin-bottom: 43px;
-  padding-top: 18px;
+  padding: 18px 20px 0 20px;
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 .example__title {
@@ -32,7 +33,6 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
-  /*outline: 1px solid cyan;/*for me*/
 }
 
 .example__item {
@@ -81,10 +81,6 @@
   text-align: center;
 }
 
-.example__slider {
-  /*outline: 1px solid yellow;/*for me*/
-}
-
 @media (min-width: $tablet-width) {
   .example {
     border-top: 1px solid $lightgrey-color;
@@ -92,6 +88,8 @@
   }
 
   .example__cover {
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 86px;
   }
 
@@ -167,6 +165,8 @@
   }
 
   .example__cover {
+    padding-left: 40px;
+    padding-right: 40px;
     width: 50%;
     margin-bottom: 68px;
   }
@@ -202,6 +202,7 @@
   }
 
   .example__slider {
+    padding: 0 40px;
     width: 50%;
   }
 }

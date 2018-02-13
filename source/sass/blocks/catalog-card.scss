@@ -67,17 +67,17 @@
     flex-direction: column;
     width: 324px;
     min-height: 553px;
-    padding: 40px;
+    padding: 40px 39px;
     align-items: center;
     background-image: linear-gradient(to bottom, #ffffff 122px, $lightgrey-color 122px);
     background-repeat: no-repeat;
-    outline: 1px solid red;
   }
 
   .catalog-card__image {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    width: 324px;
     height: 208px;
     margin-bottom: 15px;
   }
@@ -124,6 +124,10 @@
 
   .catalog-card__title {
     padding: 0 15px;
+  }
+
+  .catalog-card__image {
+    width: 245px;
   }
 
   .catalog-card__info {

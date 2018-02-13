@@ -4,6 +4,7 @@ body {
   @include font();/*как доделаю - посчитаю, каких размеров больше*/
   color: $grey-color;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 a {

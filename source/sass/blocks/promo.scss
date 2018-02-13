@@ -1,9 +1,17 @@
 .promo {
+  margin-bottom: 5px;
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(#63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(#63a73a 305px, #ffffff 305px);
+  }
 }
 
 .promo__wrapper {
@@ -33,16 +41,23 @@
   color: #ffffff;
 }
 
+.promo__image {
+  display: block;
+  order: 2;
+  width: 280px;
+}
+
 .promo__button {
   @include font(14px, 18px);
-
   padding-top: 11px;
   padding-bottom: 11px;
+  order: 1;
 }
 
 @media (min-width: $tablet-width) {
   .promo {
     background: none;
+    margin-bottom: 0;
   }
 
   .promo__wrapper {
@@ -71,37 +86,39 @@
     padding: 16px 0;
     width: 245px;
     z-index: 1;
+    order: 0;
   }
 
   .promo__image {
+    width: 709px;
     line-height: 0;
     align-self: center;
-    order: 1;
     margin-top: -75px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  /*.promo {
-    background-image:
-      linear-gradient(to left, #65a93c 47%, #ffffff 47%);
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-  }*/
-
   .promo__wrapper {
     position: relative;
-    margin-bottom: 92px;
+    min-height: 576px;
+    margin-bottom: 55px;
 
     &::after {
       position: absolute;
       content: "";
       width: 680px;
       height: 696px;
-      background: #65a93c url("../img/index-background-desktop@1x.jpg") no-repeat;
+      background-color: #65a93c;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
       top: -120px;
       left: 53%;
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -120,7 +137,9 @@
   }
 
   .promo__image {
-    margin-top: -350px;
-    margin-left: 240px;
+    width: 552px;
+    height: auto;
+    margin-top: -366px;
+    margin-left: 450px;
   }
 }
