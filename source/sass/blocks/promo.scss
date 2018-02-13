@@ -1,4 +1,5 @@
 .promo {
+  margin-bottom: 5px;
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(#63a73a 305px, #ffffff 305px);
@@ -43,6 +44,7 @@
 .promo__image {
   display: block;
   order: 2;
+  width: 280px;
 }
 
 .promo__button {
@@ -55,6 +57,7 @@
 @media (min-width: $tablet-width) {
   .promo {
     background: none;
+    margin-bottom: 0;
   }
 
   .promo__wrapper {
@@ -87,6 +90,7 @@
   }
 
   .promo__image {
+    width: 709px;
     line-height: 0;
     align-self: center;
     margin-top: -75px;

@@ -106,14 +106,22 @@
           </div>
           <div class="example__slider slider">
             <div class="slider__images">
-              <img class="slider__image slider__image--before" src="../img/before-mobile@1x.png" width="320" height="240" alt="Очень толстый котик">
-              <img class="slider__image slider__image--after" src="../img/after-mobile@1x.png" width="320" height="240" alt="Похудевший котик">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Очень толстый котик">
+              </picture>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Похудевший котик">
+              </picture>
             </div>
             <div class="slider__control-wrapper">
               <input class="visually-hidden" type="radio" id="before" name="changing" checked>
               <label class="slider__control" for="before">Было</label>
               <div class="slider__scale">
-                <div class="slider__scale slider__scale--inner"></div>
+                <div class="slider__bar"></div>
               </div>
               <input class="visually-hidden" type="radio" id="after" name="changing">
               <label class="slider__control" for="after">Стало</label>
