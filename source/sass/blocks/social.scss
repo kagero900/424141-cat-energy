@@ -13,4 +13,43 @@
   height: 55px;
   justify-content: center;
   align-items: center;
+
+  &--facebook {
+    padding-right: 5px;
+  }
+}
+
+.social__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: $green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__link--facebook {
+    padding-right: 15px;
+  }
+
+  .social__icon {
+    &--vkontakte {
+      width: 30px;
+      height: 15.76px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 13.52px;
+      height: 27.75px;
+    }
+  }
 }

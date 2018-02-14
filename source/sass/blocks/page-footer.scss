@@ -1,9 +1,5 @@
 .page-footer--inner {
   background-color: $lightgrey-color;
-  /*position: relative;*/
-  /*margin: 0;
-  padding: 0;*/
-  /*outline: 1px solid red;/*for me*/
 }
 
 .page-footer__wrapper {
@@ -40,8 +36,9 @@
 }
 
 .page-footer__logo {
+  align-self: center;
   padding-top: 39px;
-  padding-bottom: 31px;
+  padding-bottom: 27px;
 }
 
 .page-footer__social {
@@ -69,6 +66,7 @@
 
   .page-footer__wrapper {
     flex-direction: row;
+    justify-content: center;
     padding-top: 25px;
     padding-bottom: 31px;
   }
@@ -103,10 +101,11 @@
   }
 
   .page-footer__logo {
-    margin-right: 325px;
+    margin-right: 400px;
   }
 
   .page-footer__copyright {
     padding-top: 20px;
+    margin-left: auto;
   }
 }
