@@ -45,5 +45,9 @@
   ],
   "engines": {
     "node": "8.9"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "gulp-cli": "^2.0.1"
   }
 }
