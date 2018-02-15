@@ -24,8 +24,12 @@
 }
 
 .catalog-extra__promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
   position: relative;
-  padding-top: 173px;
+  padding-top: 172px;
   padding-bottom: 30px;
   background-color: $green-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -50,10 +54,11 @@
 }
 
 .catalog-extra__gift {
-  padding: 0 55px;
+  width: 170px;
+  /*padding: 0 55px;*/
   font-family: $ffas;
 
-  @include font(16px, 19px);/*в макете auto!!*/
+  @include font(16px, 19px);
   text-align: center;
   color: #ffffff;
 }
@@ -101,10 +106,9 @@
   }
 
   .catalog-extra__promo {
-    display: flex;
-    align-items: center;
     padding: 0;
-    padding-left: 423px;
+    justify-content: flex-end;
+    padding-right: 115px;
     height: 200px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -120,8 +124,6 @@
   }
 
   .catalog-extra__gift {
-    padding-left: 0;
-    padding-right: 105px;
     text-align: left;
   }
 }
@@ -143,10 +145,10 @@
   }
 
   .catalog-extra__promo {
-    width: 245px;
+    min-width: 245px;
     height: 287px;
     flex-direction: column;
-    padding: 171px 42px 0 42px;
+    padding: 171px 38px 30px 38px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -160,7 +162,7 @@
   }
 
   .catalog-extra__gift {
-    padding: 0;
+    width: 169px;
     text-align: center;
   }
 }
