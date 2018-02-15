@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-height: 65px;
 
   &::after {
     position: absolute;
@@ -16,7 +17,7 @@
 }
 
 .page-header__logo {
-  min-height: 65px;
+  padding: 12px 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -27,5 +28,11 @@
     &::after {
       display: none;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    padding-top: 47px;
   }
 }

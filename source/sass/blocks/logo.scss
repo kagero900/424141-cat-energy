@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   align-items: center;
-  width: 240px;
 
   &:hover {
     opacity: 0.8;
@@ -21,27 +20,22 @@
   width: 100px;
   height: 18px;
   margin-left: 57px;
-
-  &--footer {
-    width: 127.8px;
-    height: 23.4px;
-    margin-left: 75px;
-  }
 }
 
 @media (min-width: $tablet-width) {
-  .logo {
-    width: 203px;
+  .logo__image {
+    width: 172.3px;
+    height: 57.1px;
   }
 
   .logo__brand {
-    width: 84px;
-    height: 16px;
+    display: none;
+  }
+}
 
-    &--footer {
-      width: 127.8px;
-      height: 23.4px;
-      margin-left: 0;
-    }
+@media (min-width: $desktop-width) {
+  .logo__image {
+    width: 202px;
+    height: 59.5px;
   }
 }

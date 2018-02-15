@@ -2,6 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover .copyright__icon {
+    fill: $green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -12,6 +20,12 @@
 
   @include font(16px, 16px);
   color: $grey-color;
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
 }
 
 @media (min-width: $tablet-width) {
