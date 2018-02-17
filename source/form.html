@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Подбор программы Кэт энерджи</title>
     <script src="js/picturefill.min.js"></script>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -40,8 +42,8 @@
         <h1 class="program__title page-title">Подбор программы</h1>
         <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="program__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="program__fieldset program__fieldset--cat">
-            <legend class="visually-hidden">Данные кота</legend>
+          <div class="program__fieldset program__fieldset--cat">
+            <h2 class="visually-hidden">Данные кота</h2>
             <div class="program__field-wrapper">
               <label class="program__name" for="name">Имя:*</label>
               <input class="program__field" type="text" id="name" name="name" placeholder="Барсик" required>
@@ -54,8 +56,8 @@
               <label class="program__name" for="age">Возраст (лет):</label>
               <input class="program__field" type="text" id="age" name="age" value="7">
             </div>
-          </fieldset>
-          <fieldset class="program__fieldset program__fieldset--type">
+          </div>
+          <div class="program__fieldset program__fieldset--type">
             <ul class="program__type-list">
               <li class="program__list-item">
                 <input class="visually-hidden program__radio-input" type="radio" id="losing-weight" name="program-type" value="losing-weight" checked>
@@ -70,9 +72,9 @@
                 <label class="program__radio-name" for="advice">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="program__fieldset program__fieldset--contacts">
-            <legend class="program__subtitle">Контактные данные (владельца кота)</legend>
+          </div>
+          <div class="program__fieldset program__fieldset--contacts">
+            <h2 class="program__subtitle page-main__subtitle">Контактные данные<br> (владельца кота)</h2>
             <div class="program__fieldset-wrapper">
               <div class="program__field-wrapper">
                 <label class="program__name" for="email">E-mail:*</label>
@@ -89,13 +91,13 @@
                 </svg>
               </div>
             </div>
-          </fieldset>
-          <fieldset class="program__fieldset program__fieldset--comments">
-            <legend class="program__subtitle program__subtitle--comment">Комментарий</legend>
+          </div>
+          <div class="program__fieldset program__fieldset--comments">
+            <h2 class="program__subtitle program__subtitle--comment page-main__subtitle">Комментарий</h2>
             <textarea class="program__comment" name="comment" id="comment" cols="30">Расскажите обо всех повадках кота</textarea>
-          </fieldset>
-          <fieldset class="program__fieldset program__fieldset--extra">
-            <legend class="program__subtitle program__subtitle--extra">Дополнительно</legend>
+          </div>
+          <div class="program__fieldset program__fieldset--extra">
+            <h2 class="program__subtitle program__subtitle--extra page-main__subtitle">Дополнительно</h2>
             <ul class="program__extra-list">
               <li class="program__list-item program__list-item--extra">
                 <input class="visually-hidden program__checkbox-input" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -114,7 +116,7 @@
                 <label class="program__checkbox-name" for="vitamins" name="vitamins">Витамины</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
           <button class="program__button button" type="submit">Отправить заявку</button>
           <span class="program__requirements">*&nbsp;&mdash;&nbsp;Обязательные поля</span>
         </form>

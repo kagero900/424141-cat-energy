@@ -1,12 +1,10 @@
 .program {
   margin-bottom: 10px;
-  /*outline: 1px solid red;/*for me*/
 }
 
 .program__title {
   padding: 16px 0;
   margin-bottom: 8px;
-  /*outline: 1px solid green;/*for me*/
 }
 
 .program__text {
@@ -17,7 +15,6 @@
   @include font(14px, 18px);
   text-transform: uppercase;
   color: $darkgrey-color;
-  /*outline: 1px solid violet;/*for me*/
 }
 
 .program__fieldset {
@@ -35,38 +32,18 @@
 }
 
 .program__subtitle {
-  position: relative;
-  padding: 30px 20px 33px 0;
-  background-color: #ffffff;
-  /*margin-left: calc((100vw - 1300px) / 2);not use
-  /*margin-right: auto;not use*/
-  /*padding-left: 40px;
-  margin-left: -40px;*/
+  padding: 30px 0 33px 0;
 
   @include font(24px, 24px);
   color: $darkgrey-color;
-  /*outline: 1px solid violet;/*for me*/
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 3px;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    /*margin-left: -50vw;
-    margin-right: -50vw;*/
-    background-color: $green-color;
-    z-index: -1;
-  }
+  font-weight: 400;
 
   &--comment {
-    padding: 15px 20px 34px 0;/*убрать!!*/
+    padding: 15px 0 34px 0;
   }
 
   &--extra {
-    padding: 28px 20px 28px 0;
+    padding: 28px 0 28px 0;
   }
 }
 
@@ -99,6 +76,7 @@
   border-radius: 0;
 
   &::placeholder {
+    color: inherit;
     opacity: 1;
   }
 
@@ -194,7 +172,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 12px;/*ideal!!*/
+  padding: 12px;
   padding-left: 47px;
 
   &::before {
@@ -257,7 +235,7 @@
   text-transform: uppercase;
   resize: none;
   color: inherit;
-  border: 1px solid $lightgrey-color;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
 .program__extra-list {
@@ -343,8 +321,7 @@
 
   .program__type-list {
     padding-left: 27px;
-
-    border: 1px solid #cdcdcd;
+    border: 1px solid rgba(205, 205, 205, 0.5);
 
     &::before,
     &::after {
@@ -385,6 +362,10 @@
   .program__subtitle {
     @include font(36px, 36px);
     margin-bottom: 42px;
+
+    & br {
+      display: none;
+    }
 
     &--extra {
       margin-bottom: 13px;
@@ -470,16 +451,6 @@
 
   .program__field-wrapper {
     width: 570px;
-  }
-
-  .program__subtitle {
-    padding-left: 40px;
-    margin-left: -40px;
-
-    &::after {
-      margin-left: 0;
-      margin-right: -50vw;
-    }
   }
 
   .program__extra-list {

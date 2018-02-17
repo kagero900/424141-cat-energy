@@ -12,3 +12,13 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+var map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 59.939, lng: 30.323},
+    zoom: 17
+  });
+}
+
