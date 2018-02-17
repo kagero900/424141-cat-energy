@@ -3,28 +3,12 @@
 }
 
 .catalog-extra__title {
-  display: flex;
-  position: relative;
-  margin: 0;
-  margin-right: -20px;
   padding-top: 29px;
   padding-bottom: 33px;
-  /*background-color: #ffffff;*/
 
   @include font(24px, 24px);
   font-weight: 400;
   color: $darkgrey-color;
-
-  &::after {
-    display: block;
-    content: "";
-    min-width: 30px;
-    height: 3px;
-    flex-grow: 1;
-    margin-top: 15px;
-    margin-left: 20px;
-    background-color: $green-color;
-  }
 }
 
 .catalog-extra__list {
@@ -67,7 +51,6 @@
 
 .catalog-extra__gift {
   width: 170px;
-  /*padding: 0 55px;*/
   font-family: $ffas;
 
   @include font(16px, 19px);
@@ -86,23 +69,10 @@
   }
 
   .catalog-extra__title {
-    width: 420px;
     padding: 49px 37px;
     margin-bottom: 30px;
 
     @include font(36px, 36px);
-
-    /*&::after {
-      position: absolute;
-      content: "";
-      width: 100vw;
-      height: 3px;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      background-color: $green-color;
-      z-index: -1;
-    }*/
   }
 
   .catalog-extra__promo {
@@ -110,7 +80,6 @@
     justify-content: flex-end;
     padding-right: 115px;
     height: 200px;
-
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -135,7 +104,7 @@
     margin-bottom: 86px;
   }
 
-  .catalog-extra__title {
+  .page-main__subtitle {
     padding: 53px 0;
   }
 

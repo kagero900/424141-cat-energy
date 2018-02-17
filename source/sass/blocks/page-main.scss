@@ -1,7 +1,28 @@
 .page-main__title {
   padding-top: 15px;
   margin-bottom: 29px;
-  /*outline: 1px solid blue;/*for me*/
+}
+
+.page-main__subtitle {
+  display: flex;
+  position: relative;
+  margin: 0;
+  margin-right: -20px;
+
+  &::before,
+  &::after {
+    display: block;
+    min-width: 30px;
+    height: 3px;
+    margin-top: 15px;
+    background-color: $green-color;
+  }
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -9,10 +30,51 @@
     padding-top: 25px;
     margin-bottom: 45px;
   }
+
+  .page-main__subtitle {
+    margin-left: -30px;
+    margin-right: -30px;
+
+    &::before,
+    &::after {
+      margin-top: 20px;
+    }
+
+    &::before {
+      content: "";
+      width: 30px;
+      margin-right: 40px;
+      margin-left: -40px;
+    }
+
+    &::after {
+      margin-left: 40px;
+      margin-right: -40px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__title {
     padding-top: 67px;
+  }
+
+  .page-main__subtitle {
+    min-width: 100vw;
+    margin-left: calc((50vw - 50%) * -1);
+    margin-right: calc((50vw - 50%) * -1);
+
+    &::before,
+    &::after {
+      min-width: calc((100vw - 1300px) / 2);
+    }
+
+    &::before {
+      margin-left: 0;
+    }
+
+    &::after {
+      margin-left: 40px;
+    }
   }
 }
