@@ -9,14 +9,14 @@
 
 .page-footer__map {
   height: 362px;
-  background-color: #fcf7ef;
+  /*background-color: #fcf7ef;
   background-image: url("../img/bg-map--mobile@1x.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-map--mobile@2x.png");
-  }
+  }*/
 }
 
 .page-footer__block-group {
@@ -44,12 +44,12 @@
 
 @media (min-width: $tablet-width) {
   .page-footer__map {
-    padding-bottom: 396px;
-    background-image: url("../img/bg-map-tablet@1x.png");
+    height: 396px;
+    /*background-image: url("../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.png");
-    }
+    }*/
   }
 
   .page-footer__wrapper {
@@ -80,12 +80,12 @@
   }
 
   .page-footer__map {
-    padding-bottom: 400px;
-    background-image: url("../img/bg-map-desktop@1x.png");
+    height: 400px;
+    /*background-image: url("../img/bg-map-desktop@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");
-    }
+    }*/
   }
 
   .page-footer__logo {
