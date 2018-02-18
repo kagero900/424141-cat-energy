@@ -14,7 +14,7 @@ navToggle.addEventListener('click', function() {
 });
 
 function initMap() {
-  var point = new google.maps.LatLng(((screen.width < 1300) ? 59.938751 : 59.939075), ((screen.width < 1300) ? 30.323072 : 30.31965));
+  var point = new google.maps.LatLng(((screen.width < 1300) ? 59.938751 : 59.939075), ((screen.width < 1300) ? 30.323072 : 30.319307));
   var map = new google.maps.Map(document.getElementById('map'), {
     center: point,
     zoom: 17

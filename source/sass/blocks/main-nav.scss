@@ -142,12 +142,12 @@
   }
 
   .main-nav__link {
-    @include font(18px, 24.86px);/*only tablet!!!*/
+    @include font(18px, 24.86px);
     font-weight: 400;
 
     &--active {
       padding-bottom: 5px;
-      border-bottom: 2px solid $green-color;/*на мобиле походу нет!!*/
+      border-bottom: 2px solid $green-color;
     }
   }
 }

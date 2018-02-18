@@ -1,8 +1,7 @@
 .button {
-  /*display: block;*/
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px;/*если в каталоге жопа - поменять в промобатоне*/
+  padding-bottom: 10px;
   text-align: center;
 
   @include font();
@@ -33,9 +32,3 @@
     }
   }
 }
-
-/*@media (min-width: $tablet-width) {
-  .button {
-    font-size: 20px;
-  }
-}*/

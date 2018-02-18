@@ -94,7 +94,7 @@
     }
   }
 
-  &:focus:invalid { /*херня какая-то с ним*/
+  &:focus:invalid {
     border: 2px solid #ff8282;
 
     & ~ .program__icon {
@@ -154,11 +154,6 @@
     bottom: 0;
   }
 }
-
-/*.program__type-list {
-  border-top: 1px solid $lightgrey-color;
-  border-bottom: 1px solid $lightgrey-color;
-}*/
 
 .program__list-item {
   @include font(16px, 18px);
