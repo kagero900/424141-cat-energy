@@ -45,7 +45,7 @@
     border: 1px solid rgba(205, 205, 205, 0.5);
 
     &:not(:last-child) {
-      border-bottom: none;/*or not*/
+      border-bottom: none;
     }
   }
 
@@ -86,13 +86,13 @@
   }
 
   .extra-card__info {
-    width: 285px;
-    margin-right: 40px;
+    width: 290px;
+    margin-right: 35px;
     margin-bottom: 0;
   }
 
   .extra-card__value {
-    width: 44px;
+    width: 47px;
     text-align: left;
     margin-left: auto;
   }

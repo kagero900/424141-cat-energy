@@ -1,7 +1,7 @@
 body {
   font-family: $ffos;
 
-  @include font();/*как доделаю - посчитаю, каких размеров больше*/
+  @include font();
   color: $grey-color;
   background-color: #ffffff;
   overflow-x: hidden;
